@@ -1,0 +1,23 @@
+BEGIN
+   INPUT A,B,C
+   IF A=B=C
+      DISPLAY 3 SO BANG NHAU
+   ELSE IF A=B AND A>C
+        DISPLAY A VA B LON NHAT
+           IF A=C AND A>B
+              DISPLAY A VA C LON NHAT
+                 IF B=C AND B>A
+                    DISPLAY B VA C LON NHAT
+                         IF A>B AND A>C
+                            DISPLAY A LON NHAT
+                                IF B>A AND B>C
+                                   DISPLAY B LON NHAT
+                                      ELSE
+                                         DISPLAY C LON NHAT
+                                END IF
+                         END IF
+                    END IF
+              END IF
+        END IF
+   END IF
+END

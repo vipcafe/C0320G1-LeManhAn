@@ -1,0 +1,21 @@
+BEGIN
+   INPUT DIEMSO
+   IF DIEMSO > 100 OF DIEMSO < 0
+      DISPLAY VUI LONG NHAP LAI DIEM SO < 100 VA LON HON 0 
+   ELSE IF DIEMSO => 75
+         DISPLAY XEP LOAI A
+           IF DIEMSO >= 60  
+              DISPLAY XEP LOAI B
+                IF DIEMSO >= 45
+                   DISPLAY XEP HANG C
+                      IF DIEMSO >=35
+                         DISPLAY XEP HANG D
+                      ELSE 
+                         DISPLAY XEP HANG E
+                      END IF 
+                END IF
+             END IF
+       END IF   
+   END IF
+END          
+
