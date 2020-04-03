@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KhaiBaoVaSuDungBien</title>
+</head>
+<body>
+<h3>bai 1</h3>
+<script>
+    let i = 10;
+    let f = 20.5;
+    let b = true;
+    let s = 'Hà Nội';
+
+    document.write('i = ' + i);
+    document.write('<br/>');
+    document.write('f = ' + f);
+    document.write('<br/>');
+    document.write('b = ' + b);
+    document.write('<br/>');
+    document.write('s = ' + s);
+</script>
+<h3> Bai 2</h3>
+<script>
+    let width = 20;
+    let height = 10;
+    let area = width * height;
+    document.write('Area = ' + area);
+</script>
+
+<h3>Nhap 2 so tu ban phim va kiem tra boi so</h3>
+<button type="button" onclick="start()">Start</button>
+<script>
+    function start(){
+        let a = parseInt(prompt("Nhap so a"));
+        let b = parseInt(prompt("Nhap so b"));
+        let result = a % b ;
+        if (result === 0) {
+            alert(a + " la boi so cua " + b);
+        }
+        else {
+            alert(a + " khong phai la boi so cua " + b);
+        }
+    }
+
+</script>
+
+</body>
+</html>
