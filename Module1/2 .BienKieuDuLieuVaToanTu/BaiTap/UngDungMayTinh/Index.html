@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungMayTinh</title>
+</head>
+<body>
+<input type="number" id="add_number">
+<button type="button" onclick="plus()">phep +</button>
+<button type="button" onclick="tru()">phep -</button>
+<button type="button" onclick="nhan()">phep x</button>
+<button type="button" onclick="chia()">phep /</button>
+<input type="number" id="add_number1">
+<p>
+<h3>result :</h3>
+<h3 id="kietqua"></h3>
+</p>
+
+
+<script>
+    let number = document.getElementById("add_number");
+    let number1 = document.getElementById("add_number1");
+    let result;
+
+    function plus() {
+        result = parseInt(number.value) + parseInt(number1.value);
+        document.getElementById("kietqua").innerText=result;
+    }
+    function tru() {
+        result = parseInt(number.value)-parseInt(number1.value);
+        document.getElementById("kietqua").innerText=result;
+    }
+    function nhan() {
+        result = parseInt(number.value)*parseInt(number1.value);
+        document.getElementById("kietqua").innerText=result;
+    }
+    function chia() {
+        result = parseInt(number.value)/parseInt(number1.value);
+        document.getElementById("kietqua").innerText=result;
+    }
+
+</script>
+
+</body>
+</html>
