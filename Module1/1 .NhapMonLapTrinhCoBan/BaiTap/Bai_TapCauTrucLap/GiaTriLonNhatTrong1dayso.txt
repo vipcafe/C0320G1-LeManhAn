@@ -1,0 +1,18 @@
+BEGIN
+A[]
+INPUT A[1]....A[n]
+i=2
+MAX=A[1]
+   WHITE (i < n)
+   DO
+      IF A[i]>MAX
+         A[i]=MAX
+         i=i+1
+      ELSE
+         MAX=MAX
+         i=i+1
+      END IF
+   END DO
+DISPLAY MAX
+END
+      
