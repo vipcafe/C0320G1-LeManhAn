@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao bieu mau cho trang web</title>
+</head>
+<body>
+<form>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+
+<!--    Thuộc tính action-->
+    <form action="https://www.google.com.vn/">
+        <input type="text" name="q"/>
+        <input type="submit" value="Tìm kiếm"/>
+    </form>
+
+<!--    Nhóm các dữ liệu của biểu mẫu lại với nhau-->
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</form>
+</body>
+</html>

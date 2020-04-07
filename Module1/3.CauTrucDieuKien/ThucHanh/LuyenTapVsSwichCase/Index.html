@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>bai thuc hanh luyen tap vs swich case</h3>
+<button type="button" onclick="nhap()">Click</button>
+<script>
+   function nhap() {
+       let value = prompt("nhap trinh duyet!");
+       switch (value) {
+           case 'Edge':
+               alert("ban da co Edge");
+               break;
+           case 'chrome':
+           case 'firefox':
+           case 'opera':
+               alert('ok chung toi se ho tro trinh duyet nay');
+               break;
+           default :
+               alert('hy vong trinh duyet se chay');
+       }
+   }
+</script>
+</body>
+</html>

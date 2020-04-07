@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm Tra Năm Nhuận</title>
+</head>
+<body>
+<button type="button" onclick="TinhNamNhuan()";>Tinh Nam Nhuan </button>
+<script>
+    function TinhNamNhuan() {
+        let nam_nhuan = parseInt(prompt("Nhap so nam muon kiem tra"));
+        if(nam_nhuan % 4 == 0){
+           if(nam_nhuan % 100 == 0){
+               if(nam_nhuan % 400 == 0){
+                   alert(" la nam nhuan");
+               }
+               else {
+                   alert("khong phai nam nhuan");
+               }
+               }
+           else{
+               alert("khong phai nam nhuan");
+           }
+        }
+        else {
+           alert("khong phai nam nhuan") ;
+        }
+    }
+</script>
+</body>
+</html>
