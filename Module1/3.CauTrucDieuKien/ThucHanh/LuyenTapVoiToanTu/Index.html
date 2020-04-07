@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuyenTapVoiToanTu</title>
+</head>
+<body>
+<h3>Chương trình nhập vào giá trị cho a và b.Tính tổng a và b, nếu tổng nhỏ hơn 4</h3>
+<button type="button" onclick="batdau()">Click</button>
+<script>
+function batdau() {
+    let a = parseInt(prompt("Nhap so a :"));
+    let b = parseInt(prompt("Nhap so b :"));
+    if ((a + b) < 4) {
+        alert("below")
+    } else {
+        alert("over")
+    }
+
+}
+</script>
+<!--TOan tu 3 ngoi-->
+<h3>Chương trình nhập vào giá trị cho a và b.Tính tổng a và b, nếu tổng nhỏ hơn 4</h3>
+<h4>Su dung toan tu 3 ngoi</h4>
+<button type="button" onclick="batdau2()">Click</button>
+<script>
+    function batdau2() {
+        let a = parseInt(prompt("Nhap so a :"));
+        let b = parseInt(prompt("Nhap so b :"));
+        let result = ((a+b)<4) ? "Below":"Over";
+        alert(result);
+    }
+</script>
+
+<h3>chương trình nhập vào giá trị cho chuỗi message.</h3>
+<button type="button" onclick="batdau3()">Click</button>
+<script>
+    function batdau3() {
+        let login = prompt("nhap message");
+        let message = (login == 'Employee') ?
+            'Hello' :
+            (login == 'Director') ?
+                'Greetings' :
+                (login == '') ?
+                    'No login' :
+                    '';
+        alert(message);
+    }
+</script>
+
+</body>
+</html>

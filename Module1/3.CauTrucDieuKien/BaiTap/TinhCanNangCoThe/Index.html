@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh can nang chieu cao</title>
+</head>
+<body>
+<h3> Chuong trinh do chi so co the</h3>
+<button type="button" onclick="BMI()">Start</button>
+<script>
+    function BMI() {
+        let weight = parseFloat(prompt("nhap so can nang"));
+        let height = parseFloat(prompt('nhap chieu cao "m"'));
+        let bmi = parseFloat(weight/(height*height));
+        if (bmi>=30){
+            alert("Obese");
+        }
+        else if(25<=bmi){
+            alert("Over Weight");
+        }
+        else if(18.5<=bmi){
+            alert("Normal");
+        }
+        else {
+            alert("Under weight");
+        }
+
+
+    }
+</script>
+
+</body>
+</html>
