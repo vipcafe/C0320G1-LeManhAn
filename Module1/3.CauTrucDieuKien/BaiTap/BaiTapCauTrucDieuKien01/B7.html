@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình để tính cước điện thoại bàn cho một hộ gia đình</h3>
+<button type="button" onclick="start()">Click Me !!</button>
+<script>
+    function start() {
+        let phut = parseInt(prompt("Nhap So phut goi :"));
+        let sotien= parseInt("null");
+        if(phut < 0){
+            alert("vui long nhap lai so phut > 0")
+        }
+        else if (phut > 200){
+            let sotien_sau200 = (phut -200)*200;
+            let sotien_sau50 = 150*400;
+            let sotien_50dau = 50*600;
+            sotien = (sotien_sau200+sotien_sau50+sotien_50dau)+25000;
+            alert(sotien+" vnd");
+        }
+        else if (phut > 50){
+            let sotien_sau50 = (phut-50)*400;
+            let sotien_50dau = 50*600;
+            sotien = (sotien_sau50+sotien_50dau)+25000;
+            alert(sotien+" vnd");
+        }
+        else {
+            let sotien = (phut*600)+25000;
+        }
+    }
+</script>
+</body>
+</html>

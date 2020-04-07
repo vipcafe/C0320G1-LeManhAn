@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you Love Me</title>
+</head>
+<body>
+
+    <h1>Do you Love Me</h1>
+    <button type="button" onclick="yes()">YES</button>
+    <button type="button" onclick="no()" id="nono"  >NO</button>
+    <h1 id="returnYes"></h1>
+    <img hidden src="null" id="hinh" style="width: 30%">
+
+<script>
+    function yes() {
+        document.getElementById("returnYes").innerHTML="I LOVE YOU TOO <3";
+        document.getElementById("hinh").hidden=false;
+        document.getElementById("hinh").src="h1.jpg";
+
+    }
+     function init() {
+            vitri = document.getElementById('nono');
+            vitri.style.position = 'relative';
+            vitri.style.left = '0px';
+            vitri.style.top = '0px'
+        }
+        function no() {
+            vitri.style.left = Math.floor(Math.random()*window.innerWidth-90)  + 'px';
+            vitri.style.top  = Math.floor(Math.random()*window.innerHeight-95)  + 'px';
+        }
+        window.onload = init;
+
+
+</script>
+
+
+</body>
+</html>

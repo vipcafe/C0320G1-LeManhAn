@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div style="text-align: center">
+    <h3 >Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</h3>
+    <button type="button" onclick="start()" > Nhap tuoi</button>
+</div>
+<script>
+    function start() {
+        let tuoi = parseInt(prompt("Nhap Tuoi hoc sinh"))
+        if(tuoi == 16){
+            alert("ban du tuoi hoc lop 10")
+        }
+        else if(tuoi >16){
+            alert("ban lon hon tuoi hoc lop 10")
+        }
+        else {
+            alert("ban chua du tuoi hoc lop 10")
+        }
+    }
+</script>
+
+<body>
+
+</body>
+</html>

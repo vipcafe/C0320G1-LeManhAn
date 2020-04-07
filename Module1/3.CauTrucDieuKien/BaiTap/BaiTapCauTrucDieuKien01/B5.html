@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<br>
+<h2 style="text-align: center">Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h2>
+<h3>QUY UOC :</h3>
+<h3>TBHK = ((kiemtra)+((giuaky)*2)+((Cuoiky)*3))/6</h3>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<table>
+    <tr>
+        <th style="text-align: center">TBHK</th>
+        <th style="text-align: center">XEP LOAI</th>
+    </tr>
+    <tr>
+        <td style="text-align: center">7.5 < TBHK <=10</td>
+        <td style="text-align: center">GIOI</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">5 < TBHK <=7.5</td>
+        <td style="text-align: center">KHA</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">2.5 < TBHK <=5</td>
+        <td style="text-align: center">TRUNG BINH</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">0 <= TBHK <= 2.5 </td>
+        <td style="text-align: center">YEU</td>
+    </tr>
+</table>
+</br>
+<div style="text-align: center"><button type="button" onclick="tbhk()" >Nhap diem</button></div>
+<script>
+    function tbhk() {
+        let kiemtra = parseFloat(prompt("Nhap diem kiem Tra"))
+        let giuaky = parseFloat(prompt("nhap diem giua ky"))
+        let cuoiky = parseFloat(prompt("nhap diem cuoi ky"))
+        let tbhk = parseFloat((kiemtra+(giuaky*2)+(cuoiky*3))/6)
+        if (((kiemtra < 0 ) || (kiemtra >10)) || ((giuaky < 0 ) || (giuaky >10)) || ((cuoiky < 0 ) || (cuoiky >10))){
+            alert("vui long nhap diem > 0 va < 10")
+        }
+        else if (7.5 < tbhk){
+            alert("hoc sinh xep loai GIOI")
+        }
+        else if (5 < tbhk){
+            alert("hoc sinh xep loai KHA")
+        }
+        else if (2.5 < tbhk){
+            alert("hoc sinh xep loai TRUNG BINH")
+        }
+        else if (0 <= tbhk){
+            alert("hoc sinh xep loai YEU")
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style id="style1">
+        .img{
+            border: outset;
+            border-color: white;
+            height: 160px;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+
+<img src="H1/h1.jpg"  onclick="chuyenHinh(1)" id="hinh1" class="img" >
+<img src="H1/h2.jpg"  onclick="chuyenHinh(2)" id="hinh2" class="img">
+<img src="H1/h3.jpg"  onclick="chuyenHinh(3)" id="hinh3" class="img">
+<img src="H1/h4.jpg"  onclick="chuyenHinh(4)" id="hinh4" class="img">
+<img src="H1/h5.jpg"  onclick="chuyenHinh(5)" id="hinh5" class="img">
+
+<script>
+    let hinh1 = document.getElementById("hinh1");
+    let hinh2 = document.getElementById("hinh2");
+    let hinh3 = document.getElementById("hinh3");
+    let hinh4 = document.getElementById("hinh4");
+    let hinh5 = document.getElementById("hinh5");
+    function chuyenHinh(number) {
+        switch (number) {
+            case 1:
+                if (hinh1.getAttribute("src") === "H1/h1.jpg") {
+                    hinh1.src = "H2/h1.jpg"
+                } else if (hinh1.getAttribute("src") === "H2/h1.jpg") {
+                    hinh1.src = "H3/h1.jpg";
+                } else if (hinh1.getAttribute("src") === "H3/h1.jpg") {
+                    hinh1.src = "H1/h1.jpg";
+                }
+                break;
+            case 2:
+                if (hinh2.getAttribute("src") === "H1/h2.jpg") {
+                    hinh2.src = "H2/h2.jpg"
+                } else if (hinh2.getAttribute("src") === "H2/h2.jpg") {
+                    hinh2.src = "H3/h2.jpg";
+                } else if (hinh2.getAttribute("src") === "H3/h2.jpg") {
+                    hinh2.src = "H1/h2.jpg";
+                }
+                break;
+            case 3:
+                if(hinh3.getAttribute("src") === "H1/h3.jpg" ){
+                    hinh3.src="H2/h3.jpg"
+                }
+                else if (hinh3.getAttribute("src") === "H2/h3.jpg" ){
+                    hinh3.src="H3/h3.jpg"
+                }
+                else if (hinh3.getAttribute("src") === "H3/h3.jpg" ){
+                    hinh3.src="H1/h3.jpg"
+                }
+                break;
+            case 4:
+                if(hinh4.getAttribute("src") === "H1/h4.jpg" ){
+                    hinh4.src="H2/h4.jpg"
+                }
+                else if (hinh4.getAttribute("src") === "H2/h4.jpg" ){
+                    hinh4.src="H3/h4.jpg"
+                }
+                else if (hinh4.getAttribute("src") === "H3/h4.jpg" ){
+                    hinh4.src="H1/h4.jpg"
+                }
+                break;
+            case 5:
+                if(hinh5.getAttribute("src") === "H1/h5.jpg" ){
+                    hinh5.src="H2/h5.jpg"
+                }
+                else if (hinh5.getAttribute("src") === "H2/h5.jpg" ){
+                    hinh5.src="H3/h5.jpg"
+                }
+                else if (hinh5.getAttribute("src") === "H3/h5.jpg" ){
+                    hinh5.src="H1/h5.jpg"
+                }
+                break;
+        }
+
+        if ( (hinh1.getAttribute("src") === "H1/h1.jpg") && (hinh2.getAttribute("src") === "H1/h2.jpg") && (hinh3.getAttribute("src") === "H1/h3.jpg" ) && (hinh4.getAttribute("src") === "H1/h4.jpg" ) && (hinh5.getAttribute("src") === "H1/h5.jpg" ) ){
+            hinh1.style.borderColor="red";
+            hinh2.style.borderColor="red";
+            hinh3.style.borderColor="red";
+            hinh4.style.borderColor="red";
+            hinh5.style.borderColor="red";
+        }
+        else if ( (hinh1.getAttribute("src") === "H2/h1.jpg") && (hinh2.getAttribute("src") === "H2/h2.jpg") && (hinh3.getAttribute("src") === "H2/h3.jpg" ) && (hinh4.getAttribute("src") === "H2/h4.jpg" ) && (hinh5.getAttribute("src") === "H2/h5.jpg" ) ){
+            hinh1.style.borderColor="blue";
+            hinh2.style.borderColor="blue";
+            hinh3.style.borderColor="blue";
+            hinh4.style.borderColor="blue";
+            hinh5.style.borderColor="blue";
+        }
+        else if ( (hinh1.getAttribute("src") === "H3/h1.jpg") && (hinh2.getAttribute("src") === "H3/h2.jpg") && (hinh3.getAttribute("src") === "H3/h3.jpg" ) && (hinh4.getAttribute("src") === "H3/h4.jpg" ) && (hinh5.getAttribute("src") === "H3/h5.jpg" ) ){
+            hinh1.style.borderColor="yellow";
+            hinh2.style.borderColor="yellow";
+            hinh3.style.borderColor="yellow";
+            hinh4.style.borderColor="yellow";
+            hinh5.style.borderColor="yellow";
+        }
+
+    }
+</script>
+</body>
+</html>

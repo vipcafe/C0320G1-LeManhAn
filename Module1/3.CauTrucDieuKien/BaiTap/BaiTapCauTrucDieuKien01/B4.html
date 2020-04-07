@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h3>
+<button type="button" onclick="start()";>Click Me</button>
+<script>
+    function start() {
+        let a = parseInt(prompt("Nhap so a :"))
+        let b = parseInt(prompt("Nhap so b :"))
+        let c = parseInt(prompt("nhap so c :"))
+        if ((a == b)&& (a == c)){
+            alert("3 so = nhau")
+        }
+        else if ((a ==b )&& (a>c)){
+            alert(a+" lon nhat ")
+        }
+        else if ((a ==b )&& (a<c)){
+            alert(c+" lon nhat ")
+        }
+        else if ((b ==c )&& (b>a)){
+            alert(b+" lon nhat ")
+        }
+        else if ((b ==c )&& (b<a)){
+            alert(a+" lon nhat ")
+        }
+        else if ((c ==a )&& (c>b)){
+            alert(c+" lon nhat ")
+        }
+        else if ((c ==a )&& (c<b)){
+            alert(b+" lon nhat ")
+        }
+        else if ((a>b )&& (a>c)){
+            alert(a+" lon nhat ")
+        }
+        else if ((b>a )&& (b>c)){
+            alert(b+" lon nhat ")
+        }
+        else {
+            alert(c+" lon nhat")
+        }
+
+    }
+</script>
+</body>
+</html>
