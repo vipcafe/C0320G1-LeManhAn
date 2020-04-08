@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 1: Chuyển từ độ C sang độ F.</h3>
+<button type="button" onclick="start()" >click me !!</button>
+<script>
+    function start() {
+        let c = parseFloat(prompt("nhap do C"))
+        let f = (c*(9/5))+32
+        alert(c+" do C bang "+f+" do F")
+    }
+</script>
+
+<!--==========================================================-->
+<h3>Bài 2: Chuyển từ mét sang feet:.</h3>
+<button type="button" onclick="start2()" >click me !!</button>
+<script>
+    function start2() {
+        let m = parseFloat(prompt("nhap so m"))
+        let ft = m*3.2808
+        alert(m+"m  bang "+ft+"  Ft")
+    }
+</script>
+
+<!--==========================================================-->
+<h3>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+<button type="button" onclick="start3()" >click me !!</button>
+<script>
+    function start3() {
+        let a = parseFloat(prompt("nhap canh a "))
+        let dthv = a*a
+        alert("dien tich hinh vuong bang "+ dthv)
+    }
+</script>
+
+<!--==========================================================-->
+
+<h3>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h3>
+<button type="button" onclick="start4()" >click me !!</button>
+<script>
+    function start4() {
+        let a = parseFloat(prompt("nhap canh a "))
+        let b = parseFloat(prompt("nhap canh b "))
+        let dthcn = a*b
+        alert("dien tich hinh chu nhat bang "+ dthcn)
+    }
+</script>
+
+<!--==========================================================-->
+
+<h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+<button type="button" onclick="start5()" >click me !!</button>
+<script>
+    function start5() {
+        let a = parseFloat(prompt("nhap canh a "))
+        let b = parseFloat(prompt("nhap canh b "))
+        let dthtgv = (a*b)*0.5
+        alert("dien tich hinh tam giac vuong bang "+ dthtgv)
+    }
+</script>
+
+<!--==========================================================-->
+
+<h3>Bài 6: Giải phương trình bậc 1.</h3>
+<button type="button" onclick="start6()" >click me !!</button>
+<script>
+    function start6() {
+        alert("phuong trinh bac 1 co dang : \n ax+b=0 ")
+        let a = parseFloat(prompt("nhap  a "))
+        let b = parseFloat(prompt("nhap  b "))
+        let x = -(b/a)
+        alert("x = "+ x)
+    }
+</script>
+
+<!--==========================================================-->
+
+<h3>Bài 7: Giải phương trình bậc 2.</h3>
+<button type="button" onclick="start7()" >click me !!</button>
+<script>
+    function start7() {
+        alert("phuong trinh bac 1 co dang : \n ax^2+bx+c=0 ")
+        let a = parseFloat(prompt("nhap  a "))
+        let b = parseFloat(prompt("nhap  b "))
+        let c = parseFloat(prompt("nhap  c "))
+        let t = (b*b)-(4*a*c)
+
+        if (a == 0){
+            let x=-(c/b)
+            alert("x = "+ x)
+        }
+        else if (t == 0){
+            let x = -(b/(2*a))
+            alert("x1 = x2 = "+ x)
+        }
+        else if(t < 0){
+            alert("phuong trinh vo nghiem")
+        }
+        else {
+            let x1 = ((-b + Math.sqrt(t))/(2*a))
+            let x2 = ((-b - Math.sqrt(t))/(2*a))
+            alert("x1 = " + x1 +"\n x2 = "+ x2)
+        }
+    }
+</script>
+
+</body>
+</html>
