@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0 ;
+    let i =7;
+    let max = 0 ;
+    if(count<3){
+        for(i;i<(7*31);i++) {
+            if ((i % 30) === 0) {
+                max = max + i;
+                count++;
+            }
+            if(count==30){
+                document.write(max);
+                break;
+            }
+        }
+
+
+    }
+    alert(max)
+</script>
+
+</body>
+</html>

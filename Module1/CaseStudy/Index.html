@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+    <tr>
+    <td width='50' >Name :</td>
+    <td width='300' ><input type="text" id = 'name'></td>
+    </tr>
+    <tr>
+        <td width='200' >Số CMND :</td>
+        <td width='300' ><input type="text" id = 'cmnd'></td>
+    </tr>
+    <tr>
+        <td width='200' >Ngày tháng Năm sinh :</td>
+        <td width='300' ><input type="date" id = 'birthday'></td>
+    </tr>
+    <tr>
+        <td width='200' >email :</td>
+        <td width='300' ><input type="text" id = 'email'></td>
+    </tr>
+    <tr>
+        <td width='200' >Địa Chỉ :</td>
+        <td width='300' ><input type="text" id = 'from'></td>
+    </tr>
+    <tr>
+        <td width='200' >Thành viên :</td>
+        <td width='300' >
+            <select  id = 'rank'>
+                <option>Member</option>
+                <option>Sliver</option>
+                <option>Gold</option>
+                <option>platinum</option>
+                <option>Diamond</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td width='200' >Giãm giá :</td>
+        <td>
+            <select id = 'sale'>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td width='200' >Số Lượng :</td>
+        <td width='300' ><input type="number" id = 'amount'></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Dịch Vụ :</td>
+        <td width='300' >
+            <select id = 'service'>
+                <option >Villa</option>
+                <option >House</option>
+                <option >Room</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width='200' >Số Ngày Thuê :</td>
+        <td width='300' ><input type="number" id = 'renday'></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Phòng thuê :</td>
+        <td width='300' >
+            <select id = 'rom'>
+                <option >Normal</option>
+                <option >Vip</option>
+                <option >Business</option>
+            </select>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td><button type="button" onclick="start()">SumBit</button> </td>
+    </tr>
+
+</table>
+<script>
+    function start() {
+       let money = 0;
+       let name =document.getElementById('name').value;
+       let cmnd =document.getElementById('cmnd').value;
+       let birthday = document.getElementById('birthday').value;
+       let email = document.getElementById('email').value;
+       let from = document.getElementById('from').value;
+       let rank = document.getElementById('rank').value;
+       let amount = document.getElementById('amount').value;
+       let sale = document.getElementById('sale').value;
+       let renday = document.getElementById('renday').value;
+       let service = document.getElementById('service').value;
+       let rom = document.getElementById('rom').value;
+        if(service == 'Villa'){
+            money = 500 * renday*(1-(sale/100))
+        }
+        else if(service == 'House'){
+            money = 300 * renday*(1-(sale/100))
+        }
+        else if(service == 'Room'){
+            money = 100 * renday*(1-(sale/100))
+        }
+
+
+       alert(
+           "Name :                "+name+"\n"+
+           "Số CMND :             "+cmnd+"\n"+
+           "Ngày tháng Năm sinh : "+birthday+"\n"+
+           "Địa Chỉ :             "+email+"\n"+
+           "email :               "+from+"\n"+
+           "Thành viên :          "+rank+"\n"+
+           "Giãm giá :            "+sale+"\n"+
+           "Số Lượng :            "+amount+"\n"+
+           "Loại Dịch Vụ :        "+service+"\n"+
+           "Số Ngày Thuê :        "+renday+"\n"+
+           "Loại Phòng thuê :     "+rom+"\n"+
+           "Tổng số tiền trả :    " + money + "$"
+       )
+
+
+
+        // document.write(
+        //     'Name :                '+name+'</br>'+
+        //     "Số CMND :             "+cmnd+'</br>'+
+        //     "Ngày tháng Năm sinh : "+birthday+'</br>'+
+        //     "Địa Chỉ :             "+email+'</br>'+
+        //     "email :               "+from+'</br>'+
+        //     "Thành viên :          "+rank+'</br>'+
+        //     "Giãm giá :            "+sale+'%'+'</br>'+
+        //     "Số Lượng :            "+amount+'</br>'+
+        //     "Loại Dịch Vụ :        "+service+'</br>'+
+        //     "Số Ngày Thuê :        "+renday+'</br>'+
+        //     "Loại Phòng thuê :     "+rom+'</br>' +
+        //     'Tổng số tiền phải trả : ' + money + ' $'
+        // )
+    }
+</script>
+
+</body>
+</html>

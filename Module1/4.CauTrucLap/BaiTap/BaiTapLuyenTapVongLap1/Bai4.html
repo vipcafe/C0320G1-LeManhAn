@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let    i=1;
+    let    a  = 0;
+    let    a1 = 1;
+    let    snt = a + a1 ;
+    while (i<=100){
+        if(i==1 || i== 2){
+            snt=1;
+            i++;
+        }
+        else {
+            a = a1;
+            a1 = snt;
+            snt = a + a1;
+            if(snt%5==0){
+                document.write(snt + '</br>');
+                break;
+            }
+            i++;
+        }
+    }
+</script>
+
+</body>
+</html>

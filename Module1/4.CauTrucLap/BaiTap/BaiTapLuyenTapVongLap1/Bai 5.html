@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let    i=0;
+    let    a  = 0;
+    let    a1 = 1;
+    let    fmns = a + a1 ;
+    let    max=0;
+    while (i<20){
+        if(i==0 || i== 1){
+            fmns=1;
+            i++;
+        }
+        else {
+            a = a1;
+            a1 = fmns;
+            fmns = a + a1;
+            max=max +fmns ;
+            i++;
+        }
+        if(i == 20) {
+            document.write(max)
+        }
+    }
+</script>
+</body>
+</html>
