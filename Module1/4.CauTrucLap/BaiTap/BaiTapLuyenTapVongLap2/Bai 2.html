@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>In giai thừa 1 số nguyên dương</h3>
+<button type="button" onclick="start()" >Start</button>
+<script>
+   function start() {
+       let a = parseInt(prompt("Nhap so nguyen duong"));
+       let i = 0;
+       let sum = 1 ;
+       if (a == 0){
+           sum = 1;
+       }
+       else  if(a < 0){
+           alert("vui long nhap lai");
+       }
+       else if(a > 0){
+           for(i ; i<a ;i++){
+               sum=sum*(i+1);
+           }
+        alert(sum);
+       }
+   }
+</script>
+</body>
+</html>
