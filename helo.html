@@ -5,8 +5,132 @@
     <title>Title</title>
 </head>
 <body>
+<table >
+    <tr>
+        <td width='50' >Name :</td>
+        <td width='300' ><input type="text" id = 'name'></td>
+    </tr>
+    <tr>
+        <td width='200' >Số CMND :</td>
+        <td width='300' ><input type="text" id = 'cmnd'></td>
+    </tr>
+    <tr>
+        <td width='200' >Ngày tháng Năm sinh :</td>
+        <td width='300' ><input type="date" id = 'birthday'></td>
+    </tr>
+    <tr>
+        <td width='200' >email :</td>
+        <td width='300' ><input type="text" id = 'email'></td>
+    </tr>
+    <tr>
+        <td width='200' >Địa Chỉ :</td>
+        <td width='300' ><input type="text" id = 'from'></td>
+    </tr>
+    <tr>
+        <td width='200' >Thành viên :</td>
+        <td width='300' >
+            <select  id = 'rank'>
+                <option>Member</option>
+                <option>Sliver</option>
+                <option>Gold</option>
+                <option>platinum</option>
+                <option>Diamond</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width='200' >Giãm giá :</td>
+        <td>
+            <select id = 'sale'>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width='200' >Số Lượng :</td>
+        <td width='300' ><input type="number" id = 'amount'></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Dịch Vụ :</td>
+        <td width='300' >
+            <select id = 'service'>
+                <option >Villa</option>
+                <option >House</option>
+                <option >Room</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width='200' >Số Ngày Thuê :</td>
+        <td width='300' ><input type="number" id = 'renday'></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Phòng thuê :</td>
+        <td width='300' >
+            <select id = 'rom'>
+                <option >Normal</option>
+                <option >Vip</option>
+                <option >Business</option>
+            </select>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td><button type="button" onclick="start()">SumBit</button></td>
+    </tr>
+</table>
 <script>
-
-</script>
-</body>
-</html>
+    let a = [
+        "Name :", "Số CMND :", "Ngày tháng Năm sinh : ", "Địa Chỉ :", "email :",
+        "Thành viên :", "Giãm giá :", "Số Lượng :", "Loại Dịch Vụ :", "Số Ngày Thuê :",
+        "Loại Phòng thuê :", "Tổng số tiền phải trả :"
+    ];
+    let b=[]
+    function start() {
+        b = [
+            document.getElementById('name').value,
+            document.getElementById('cmnd').value,
+            document.getElementById('birthday').value,
+            document.getElementById('from').value,
+            document.getElementById('email').value,
+            document.getElementById('rank').value,
+            document.getElementById('sale').value,
+            document.getElementById('amount').value,
+            document.getElementById('service').value,
+            document.getElementById('renday').value,
+            document.getElementById('rom').value
+        ];
+        let money;
+        if (b[8] === 'Villa') {
+            money = 500 * b[9] * (1 - (b[6] / 100))
+        } else if (b[8] === 'House') {
+            money = 300 * b[9] * (1 - (b[6] / 100))
+        } else if (b[8] === 'Room') {
+            money = 100 * b[9] * (1 - (b[6] / 100))
+        }
+        b[11] = money + "$";
+        let data = "<table>"
+        for (let i = 0; i < a.length; i++) {
+            data += "<tr>" +
+                "<td width='30px' >" + i + "</td>" +
+                "<td width='170px' >" + a[i] + "</td>" +
+                "<td width='200px' >" + b[i] + "</td>" +
+                "</tr>";
+        }
+        data += '</table><br><br>';
+        data += '<input  type="button" value="Edit" onclick="Edit()" >';
+        document.write(data);
+    }
+    function Edit() {
+        let info ;
+        let ed = parseInt(prompt("Nhap so muon sữa theo STT thong tin khach hang 0->10 :"));
+        if(ed >= 0 && ed < 11){
+            info = prompt("Nhap lai thong tin \n"+a[ed]);
+            b[ed]=info;
+            alert(b[ed]);
+        }
+        else {
+            alert("vui long nhap so trong pham vi tu 0 -> 10")
+        }
+    }

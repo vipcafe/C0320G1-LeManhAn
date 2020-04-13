@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = new Array();
+    let x=0;
+    let i=0;
+    let k=parseInt(prompt("Nhap So luong phan tu"));
+    while(x<k) {
+        a[x] = parseInt(prompt("Nhap Phan Tu "));
+        x++;
+    }
+    for(i;i<k;i++) {
+        if (a[i] % 2 == 0 && a[i + 1] % 2 == 0) {
+            a[i + 1] = "-" + a[i + 1];
+        }
+    }
+   for(j=0;j<k;j++){
+       document.write(a[j]);
+   }
+</script>
+</body>
+</html>

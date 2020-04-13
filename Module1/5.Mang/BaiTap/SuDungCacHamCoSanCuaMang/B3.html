@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Dien</title>
+</head>
+<body>
+<input type="text" id="add.text">
+<button type="button" onclick="search2()">Search</button>
+<SCRIPT>
+    let x= ["hello","why","house","car","money"];
+    let y= ["xin chao","tai sao","nha","xe","tien"];
+
+
+    function search2() {
+        let search = document.getElementById("add.text").value;
+        let a = "";
+        for(let i=0 ; i< x.length ;i++){
+            if(search == x[i]){
+                alert(x[i] + "\nTieng viet : " + y[i]);
+                a=true;
+            }
+            else if(search == y[i]){
+                alert( y[i] + "\nTieng Anh : "+ x[i]);
+                a = true;
+            }
+        }
+        if (a !== true){
+            alert("tu ban tim kiem ko co trong tu dien")
+        }
+    }
+</SCRIPT>
+
+</body>
+</html>
