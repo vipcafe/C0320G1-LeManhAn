@@ -11,6 +11,7 @@
     let a=[];
     let data = "";
     let x ;
+    let b = document.getElementById("text");
     for (let i=0; i<5 ; i++){
          a[i]= new Array("(.)","(.)","(.)","(.)","(.)");
     }
@@ -22,10 +23,10 @@
     }
     data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
     document.getElementById("text").innerHTML = data;
+    let count = 0;
 
     function changeValue() {
-        let count = 0;
-        while (count < 100){
+         if (count < 100){
             let positionX = prompt("X: ");
             let positionY = prompt("Y: ");
             data = "";
@@ -34,7 +35,7 @@
                 for (let i = 0; i < 5; i++) {
                     data += "<br/>";
                     for (let j = 0; j < 5; j++) {
-                        data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                 }
             }
@@ -43,7 +44,7 @@
                 for (let i = 0; i < 5; i++) {
                     data += "<br/>";
                     for (let j = 0; j < 5; j++) {
-                        data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                 }
             }

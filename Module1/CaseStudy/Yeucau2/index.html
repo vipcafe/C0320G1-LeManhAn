@@ -42,7 +42,7 @@
     <tr>
         <td width='200' >Giãm giá :</td>
         <td>
-            <select id = 'sale'>
+            <select id = 'sale' hidden>
                 <option value="10">10%</option>
                 <option value="20">20%</option>
                 <option value="30">30%</option>
@@ -103,6 +103,7 @@
         }
         data += '</table><br><br>';
         data += '<input  type="button" value="Edit" onclick="Edit()" >';
+        document.body.innerHTML="";
         document.write(data);
     }
     function moneyplus() {
@@ -118,7 +119,6 @@
         }
 
         if(b[5] === 'Sliver'){
-            alert("run")
             money -= 2;
         }
         else if(b[5] === 'Gold'){
@@ -132,18 +132,15 @@
         }
 
         if(b[9] > 7){
-            alert(b[9]);
             money -= 30;
         }
         else if(b[9] >= 5){
             money -= 20;
         }
         else if(b[9] >= 2){
-            alert("null");
             money -= 10;
         }
         if(b[3] === "Da Nang"){
-            alert(b[3])
             money -= 20;
         }
         else if(b[3] === "Hue"){
@@ -172,6 +169,7 @@
         ];
         moneyplus()
         prinln();
+        alert("Them Thanh Cong");
     }
 
     function Edit() {
