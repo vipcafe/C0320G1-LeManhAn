@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap ky tu muon kiem tra");
+    kiemtra_so(a);
+    function kiemtra_so(number) {
+        if (number != parseInt(number) || number != parseFloat(number)){
+            alert(number+" : ko phai so False");
+        }
+        else {
+            alert(number+" : la so True");
+        }
+    }
+</script>
+
+</body>
+</html>

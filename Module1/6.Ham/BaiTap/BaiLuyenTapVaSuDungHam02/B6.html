@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap so can kiem tra ");
+    SoNguyenDuong(a);
+    function SoNguyenDuong(number) {
+        if (number == parseInt(number) && number>0){
+            alert(number+" La so nguyen duong");
+        }
+        else if (number != parseInt(number)){
+            alert(number + " ko phai la so nguyen ");
+        }
+        else {
+            alert(number + " ko phai so nguyen duong");
+        }
+
+    }
+</script>
+
+
+</body>
+</html>

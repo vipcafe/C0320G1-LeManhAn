@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let max ;
+    let a = new Array();
+    let b = new Array();
+
+    function daonguoc() {
+        let j = parseInt(a.length-1);
+        alert(a.length)
+        for (let i = 0 ; i< a.length ; i++){
+            b[i] = a[j] ;
+            j-- ;
+        }
+        a=b;
+    }
+
+    function start() {
+        count = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            daonguoc();
+            alert(a+"\n");
+        }
+    }
+
+
+</script>
+</body>
+</html>

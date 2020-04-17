@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let a = new Array();
+    let v ;
+    let b;
+    function timV() {
+        v = parseInt(prompt("Nhap So can tim"));
+        for (let i =0 ; i<a.length ; i ++){
+            if(a[i] == v ){
+                alert(a[i]+" Co trong Mang");
+                for (i; i < a.length ; i++){
+                    a[i]=a[i+1];
+                    if(i == (a.length-1)){
+                        a[i] = 0 ;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    function start() {
+        count = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            timV();
+            alert(a+"\n");
+        }
+    }
+
+
+</script>
+</body>
+</html>

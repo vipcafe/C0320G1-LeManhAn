@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi giữa feet và meters</h3>
+<button type="button" onclick="start()">Start</button>
+<script>
+    function start() {
+        let a = parseInt(prompt("vui long chon loai chuyen doi \n 1. Feet to Meter \n 2. Meter to Feet"));
+        switch (a){
+            case 1 :
+                let a = F_To_M(prompt("Nhap so Feet :"));
+                alert(a);
+                break;
+            case 2 :
+                let b =M_To_F(prompt("Nhap so Meter :"));
+                alert(b);
+                break;
+        }
+    }
+    function F_To_M(feet) {
+        return feet*0.305;
+    }
+    function M_To_F(meter) {
+        return meter*3.279;
+    }
+</script>
+</body>
+</html>

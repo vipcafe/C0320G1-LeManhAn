@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let a = new Array();
+    let b = new Array();
+    let c = new Array();
+    function NoiMang() {
+        for( let i=0 ; i< a.length ; i++){
+            c.push(a[i]);
+        }
+        for( let i=0 ; i< a.length ; i++){
+            c.push(b[i]);
+        }
+    }
+
+    function start() {
+        count = 0;
+        count2 = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu A thu " + i));
+                count++
+            }
+        }
+        while (count2 < 10) {
+            for (let i = 0; i < 10; i++) {
+                b[i] = parseInt(prompt("Nhap 10 Phan Tu B thu " + i));
+                count2++
+            }
+        }
+        NoiMang();
+        alert(c);
+    }
+</script>
+</body>
+</html>

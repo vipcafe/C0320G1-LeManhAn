@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let c = new Array();
+     function start() {
+        count = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                c[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            c.sort(function (a,b){
+                return b -a ;
+            })
+            alert(c+"\n");
+        }
+    }
+</script>
+</body>
+</html>

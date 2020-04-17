@@ -10,7 +10,6 @@
 <script>
     let a=[];
     let data = "";
-    let x ;
     let b = document.getElementById("text");
     for (let i=0; i<5 ; i++){
          a[i]= new Array("(.)","(.)","(.)","(.)","(.)");
@@ -24,6 +23,46 @@
     data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
     document.getElementById("text").innerHTML = data;
     let count = 0;
+
+    function win() {
+        //Hang ngang
+        for (let j = 0; j < 5; j++) {
+            for (let i = 0; i < 5; i++) {
+                if (a[j][i] === "x" && a[j][i + 1] === "x" && a[j][i + 2] === "x") {
+                    alert("X win !!")
+                } else if (a[j][i] === "y" && a[j][i + 1] === "y" && a[j][i + 2] === "y") {
+                    alert("X win !!")
+                }
+            }
+        }
+        // hang doc
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (a[j][i] === "x" && a[j + 1][i] === "x" && a[j + 2][i] === "x") {
+                    alert("X win !!")
+                } else if (a[j][i] === "y" && a[j + 1][i] === "y" && a[j + 2][i] === "y") {
+                    alert("X win !!")
+                }
+            }
+        }
+
+        //Hang cheo' "\"
+        for (let j = 0; j < 5; j++) {
+            if (a[j][j] === "x" && a[j + 1][j + 1] === "x" && a[j + 2][j + 2] === "x") {
+                alert("X win !!")
+                break;
+            } else if (a[j][j] === "0" && a[j + 1][j + 1] === "0" && a[j + 2][j + 2] === "0") {
+                alert("O win !!")
+                break;
+            } else if (a[j+1][j] === "0" && a[j+2][j + 1] === "0" && a[j+3][j + 2] === "0") {
+                alert("O win !!")
+                break;
+            } else if (a[j+1][j] === "x" && a[j+2][j + 1] === "x" && a[j+3][j + 2] === "x") {
+                alert("X win !!")
+                break;
+            }
+        }
+    }
 
     function changeValue() {
          if (count < 100){
@@ -49,10 +88,10 @@
                 }
             }
             count++;
-
             data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
             b.innerHTML = "<hr/>" + data;
-        }
+         }
+     win()
 
     }
 

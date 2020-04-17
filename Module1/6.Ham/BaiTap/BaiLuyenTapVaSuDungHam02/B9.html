@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =new Array();
+    let b =prompt("Nhap so luong phan tu mang")
+    Nhap(b);
+    let c =prompt("Nhap ky tu muon kiem tra ");
+    kiemtra(c);
+    function kiemtra(string) {
+        let count = 0;
+        let check = false;
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < 10; j++) {
+                if (a[i].indexOf(string, j) != -1) {
+                    check = true;
+                    count++;
+                }
+            }
+        }
+        if (check == false) {
+            count = -1;
+        }
+        return alert(count);
+    }
+
+    function Nhap(countMax) {
+        let count = 0;
+        while (count<countMax){
+            for(count  ; count < countMax ; count++)
+            a[count]=prompt("Nhap phan tu thu "+(count+1)+" :")
+        }
+        return alert(a);
+    }
+
+</script>
+</body>
+</html>

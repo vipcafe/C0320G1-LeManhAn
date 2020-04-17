@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    a=["Polaris", "Aldebaran","Deneb", "Vega", "Altair", "Dubhe"];
+    b=["Ursa","Minor Tarurus","Cygnus","Lyra","Aquila","Ursa","Major","Leo"];
+    c = prompt("Nhap thu ban tim");
+    search(c)
+    function search(text) {
+        let d = false;
+        for (let i = 0 ; i< a.length ; i++){
+            if (a [i] === text){
+                d = true;
+                alert(b[i])
+            }
+        }
+        if(d == false){
+            alert(text + " ko co")
+        }
+    }
+
+</script>
+</body>
+</html>

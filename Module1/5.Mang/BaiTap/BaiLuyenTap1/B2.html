@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuong trinh kiem tra lon hon hoac = 10</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let max ;
+    let a = new Array();
+    let vitri ;
+    function Max() {
+        max = 0 ;
+        for (let i = 0 ; i< 10 ; i ++){
+            if(max < a[i]){
+                 max = a[i];
+            }
+        }
+    }
+    function seach() {
+        vitri=0
+        for (let j = 0 ;j<a.length ; j++ ){
+            if (a[j] === max ){
+                vitri += j ;
+            }
+        }
+         }
+    function start() {
+        count = 0;
+        count2 = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            Max();
+            seach()
+            alert(a+"\n"+max +"\n a["+vitri+"]")
+        }
+    }
+
+
+</script>
+</body>
+</html>

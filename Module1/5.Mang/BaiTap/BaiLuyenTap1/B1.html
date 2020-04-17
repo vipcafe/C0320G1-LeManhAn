@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuong trinh kiem tra lon hon hoac = 10</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    function start() {
+        let a = new Array();
+        count = 0;
+        count2 = 0;
+        while(count<10){
+            for(let i =0 ; i<10 ; i++){
+                a[i] = prompt("Nhap 10 Phan Tu thu "+ i);
+                count++
+            }
+            for(let i = 0; i<10 ;i++){
+                if (a[i]>=10){
+                    count2++;
+                }
+            }
+            alert("ham a =["+a+"]\n Co "+count2+" so lon hon hoac = 10" )
+
+        }
+
+    }
+</script>
+</body>
+</html>

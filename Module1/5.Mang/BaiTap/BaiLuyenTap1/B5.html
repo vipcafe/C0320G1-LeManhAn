@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>chương trình đếm số nguyên âm trong một chuỗi</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let a = new Array();
+    let count2 = 0;
+    function demsoam() {
+        for(let i=0 ; i<a.length ; i++){
+            if(a[i] < 0){
+                count2++
+            }
+        }
+    }
+    function start() {
+        count = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            demsoam()
+            alert(a+"\n"+ "so am = "+count2);
+        }
+    }
+
+
+</script>
+</body>
+</html>

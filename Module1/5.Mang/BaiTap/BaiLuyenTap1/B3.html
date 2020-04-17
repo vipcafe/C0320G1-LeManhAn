@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</h3>
+<button type="button" onclick="start()">START</button>
+<script>
+    let max ;
+    let a = new Array();
+    let vitri ;
+    let tbinh;
+    function Max() {
+        max = 0 ;
+        for (let i = 0 ; i< 10 ; i ++){
+            if(max < a[i]){
+                max = a[i];
+            }
+        }
+    }
+    function trungbinh() {
+        tbinh=0;
+        for (let i = 0 ; i<a.length ; i++){
+            tbinh += a[i];
+        }
+        alert(tbinh)
+        tbinh =parseFloat(tbinh/(a.length)) ;
+    }
+    function start() {
+        count = 0;
+        while (count < 10) {
+            for (let i = 0; i < 10; i++) {
+                a[i] = parseInt(prompt("Nhap 10 Phan Tu thu " + i));
+                count++
+            }
+            Max();
+            trungbinh();
+            alert(a+"\n"+max+"\n Trung Binh : " +tbinh );
+        }
+    }
+
+
+</script>
+</body>
+</html>
