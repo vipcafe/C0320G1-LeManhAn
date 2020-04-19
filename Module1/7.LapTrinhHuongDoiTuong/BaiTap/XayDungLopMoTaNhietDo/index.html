@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature {
+        constructor(nhietdo) {
+            this.nhietdo =parseInt(prompt("Nhap nhiet do C"));
+        }
+        convert_CtoF(){
+            return 33.8*this.nhietdo ;
+        }
+        convert_CtoKenvin(){
+            return this.nhietdo + 273.15 ;
+        }
+    }
+    let nhietdoC = new temperature();
+    alert("C to F : "+nhietdoC.convert_CtoF()+"\nC to Kenvin : "+nhietdoC.convert_CtoKenvin())
+</script>
+</body>
+</html>

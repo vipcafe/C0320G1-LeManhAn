@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id = "prin1" >
+    <tr>
+        <td width='50' >Name :</td>
+        <td width='600' ><input type="text" id = 'name'></td>
+    </tr>
+    <tr>
+        <td width='200' >Số CMND :</td>
+        <td><input type="text" id = 'cmnd'><h id ="bug_cmnd" ></h></td>
+
+    </tr>
+    <tr>
+        <td width='200' >Ngày tháng Năm sinh :</td>
+        <td width='300' ><input type="text" id = 'birthday'><h id ="bug_birthday" >*</h></td>
+    </tr>
+    <tr>
+        <td width='200' >email :</td>
+        <td width='300' ><input type="text" id = 'email'><h id ="bug_email" >*</h></td>
+    </tr>
+    <tr>
+        <td width='200' >Địa Chỉ :</td>
+        <td width='300' ><input type="text" id = 'from'></td>
+    </tr>
+    <tr>
+        <td width='200' >Thành viên :</td>
+        <td width='300' >
+            <select  id = 'rank'>
+                <option>Member</option>
+                <option>Sliver</option>
+                <option>Gold</option>
+                <option>platinum</option>
+                <option>Diamond</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td width='200' >Giãm giá :</td>
+        <td>
+            <select id = 'sale' hidden>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td width='200' >Số Lượng :</td>
+        <td width='300' ><input type="number" id = 'quantum'><h id = "bug_quantum">*</h></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Dịch Vụ :</td>
+        <td width='300' >
+            <select id = 'service'>
+                <option >Villa</option>
+                <option >House</option>
+                <option >Room</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width='200' >Số Ngày Thuê :</td>
+        <td width='300' ><input type="number" id = 'renday'><h id = "bug_renday">*</h></td>
+    </tr>
+    <tr>
+        <td width='200' >Loại Phòng thuê :</td>
+        <td width='300' >
+            <select id = 'rom'>
+                <option >Normal</option>
+                <option >Vip</option>
+                <option >Business</option>
+            </select>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td><button type="button" onclick="start()">SumBit</button> </td>
+    </tr>
+<table id="prinln2"></table>
+</table>
+<script src="Function.js">
+
+</script>
+</body>
+</html>
