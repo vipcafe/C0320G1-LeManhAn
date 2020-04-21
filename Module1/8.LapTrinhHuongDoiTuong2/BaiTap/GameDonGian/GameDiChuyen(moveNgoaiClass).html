@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img src="pikachu.png" id="image" style="position: absolute ; left : 0px ; top: 0px" ; width="100" ; height="100">
+<SCRIPT>
+    class Pikachu {
+        constructor(speed) {
+            this.speed = speed;
+        }
+        moveUP() {
+            let move = document.getElementById("image");
+            return move.style.top = parseInt(move.style.top) + this.speed + 'px';
+        }
+        moveDOW() {
+            let move = document.getElementById("image");
+            return move.style.top = parseInt(move.style.top) - this.speed + 'px';
+        }
+        moveL() {
+            let move = document.getElementById("image");
+            return move.style.left = parseInt(move.style.left) - this.speed + 'px';
+        }
+        moveR() {
+            let move = document.getElementById("image");
+            return move.style.left = parseInt(move.style.left) + this.speed + 'px';
+        }
+
+    }
+    let pikachu1 = new Pikachu(15)
+    function move(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                pikachu1.moveL();
+                break;
+            case 39:
+                pikachu1.moveR();
+                break;
+            case 38:
+                pikachu1.moveDOW();
+                break;
+            case 40:
+                pikachu1.moveUP();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown',move);
+    }
+</SCRIPT>
+</body>
+</html>

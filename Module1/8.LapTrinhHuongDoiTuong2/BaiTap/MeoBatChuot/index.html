@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mouse {
+        constructor(name,weight,speed,status) {
+            this.name = name ;
+            this.weight = weight ;
+            this.speed = speed ;
+            this.status = status ;
+        }
+        mouseSay(){
+            alert("chít chít")
+        }
+        mouseSay2(){
+            alert("Do anh bat duoc em")
+        }
+        setStatus(){
+            if(status === "alive"){
+                this.mouseSay();
+            }
+            else if(status === "die"){
+                alert("Chuột đã từ trần")
+            }
+        }
+    }
+    class cat {
+        constructor(name,weight,speedPlus) {
+            this.name = name ;
+            this.weight =weight ;
+            this.speedP
+        }
+        catSay(){
+            alert("Meo Meo !!")
+        }
+        catSay2(){
+            alert("May chet vs Anh")
+        }
+        PlusSpeed(){
+            if(this.speedP<this.mouse.speed){
+                this.PlusSpeed()
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Adam and Eva</title>
+</head>
+<body>
+<script>
+    class human {
+        constructor(name,gender,weight) {
+            this.name = name ;
+            this.gender = gender ;
+            this.weight = weight ;
+        }
+        isMale (){
+            if (this.gender == 0){
+                return "Nam" ;
+            }
+            if (this.gender == 1){
+                return "Nu" ;
+            }
+        }
+        story(){
+            if(this.gender == 0){
+                alert(this.name+"\nGiới tính : "+this.isMale()+"\nCân nặng :"+this.weight+"\nLa con nguoi dau tien tren the gioi")
+            }
+            else if(this.gender == 1) {
+                alert(this.name+"\nGiới tính : "+this.isMale()+"\nCân nặng :"+this.weight+"\nĐược sinh ra từ xương sườn của Adam")
+            }
+        }
+        story2(){
+            if(this.gender == 0){
+                alert(this.name+" : Tìm được quả Táo ")
+            }
+            else if(this.gender == 1) {
+                alert(this.name+" : Cho ăn với , ăn 1 mình nghẹn đó")
+            }
+        }
+        eatApple(){
+            alert(this.name +" Can 1 mieng \nTáo ngon quá , ăn thêm miếng nữa ");
+        }
+    }
+    let adam = new human("Adam",0,54)
+    adam.story();
+    let eva = new human("Eva",1,45)
+    eva.story();
+    adam.story2();
+    eva.story2();
+    eatApple(6);
+    function eatApple(weight) {
+        let count = 1 ;
+        let sum = weight;
+        while (count<=weight){
+                adam.eatApple();
+                count++;
+                sum= sum -1 ;
+                alert("khoi luong trai tao con : " + sum )
+                eva.eatApple();
+                count++;
+                sum= sum -1 ;
+                alert("khoi luong trai tao con : " + sum )
+        }
+        alert("het me trai tao roi")
+    }
+
+</script>
+</body>
+</html>
