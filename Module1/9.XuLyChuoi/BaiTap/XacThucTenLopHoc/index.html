@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate class rom name </title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1 style="color: darkblue">KIỂM TRA TÊN LỚP HỌC</h1>
+    <input type="text" id = "addNameClassRom">
+    <br><br>
+    <button type="button" onclick="checkNameClassRom()" >CHECK</button>
+    <h3 id ="display" style="color : red"></h3>
+</div>
+<script>
+    function checkNameClassRom(str) {
+        str=document.getElementById("addNameClassRom").value;
+        regexp = /^[CAP][0-9]{4}[GHIKLM]$/;
+        if(regexp.test(str)){
+            return document.getElementById("display").innerHTML = "Tên có thể sử dụng !!"
+        }
+        else{
+            return document.getElementById("display").innerHTML = "Tên một lớp học hợp lệ cần đạt các yêu cầu sau:" +
+                "<br>" +
+                "Bắt đầu bằng một ký tự chữ hoa C hoặc A hoặc P" +
+                "<br>" +
+                "Không chứa các ký tự đặc biệt" +
+                "<br>" +
+                "Theo sau ký tự bắt đầu là 4 ký tự số " +
+                "<br>" +
+                "Kết thúc phải là 1 trong những ký tự chữ hoa sau: G, H, I, K, L, M" +
+                "<br>" +
+                "Ví dụ tên lớp hợp lệ: C0318G"
+        }
+    }
+</script>
+</body>
+</html>

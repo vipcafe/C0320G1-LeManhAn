@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function is_usZipCode(str){
+        regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        if(regexp.test(str)){
+            alert(str+': is US zipcode');
+        }
+        else {
+            alert( str+' : is not US zipcode')
+        }
+    }
+    is_usZipCode("12354-5485")
+    is_usZipCode("123545485")
+</script>
+</body>
+</html>

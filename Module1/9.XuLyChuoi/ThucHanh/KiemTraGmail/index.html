@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkEmail(str) {
+        regexp = /^[a-zA-Z0-9]+[a-zA-Z0-9]*@[a-zA-Z-0-9]+([\.[a-zA-Z0-9]+)$/
+        if(regexp.test(str)){
+            alert("email : "+str+" done")
+        }
+        else {
+            alert("please input your email in the format : xxxx@xxx.xxx")
+        }
+    }
+    checkEmail("vipcafe@gmail.com")
+    checkEmail("v@.com")
+</script>
+</body>
+</html>

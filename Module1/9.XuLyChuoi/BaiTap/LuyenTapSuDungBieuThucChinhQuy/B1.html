@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1 style="color: darkblue">Định dạng ngày tháng</h1>
+<input type="text" id = "addDate" >
+<br><br>
+<button type="button" onclick="start()">Check</button>
+<br>
+<h3 style="color: brown" id ="display"></h3>
+</div>
+<script>
+    let str = document.getElementById("addDate");
+    function start() {
+        formatDate(str.value);
+    }
+    function formatDate(str) {
+        regexp = /^[0-1]{1}[0-9]{1}\/[0-3]{1}[0-9]\/[0-9]{4}/;
+        if(regexp.test(str)){
+            document.getElementById("display").innerHTML = "oke";
+        }
+        else{
+            document.getElementById("display").innerHTML = "Vui lòng nhập ngày tháng năm theo định dang dd/mm/yyyy";
+        }
+    }
+</script>
+</body>
+</html>

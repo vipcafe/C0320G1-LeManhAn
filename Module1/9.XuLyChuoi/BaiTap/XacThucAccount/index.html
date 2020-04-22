@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Validate account</title>
+</head>
+<body>
+<input type="text" id = "addAccount"><button type="button" onclick="start()">Check Account</button>
+<br>
+<p id="display"></p>
+<script>
+    function validateAccount(str) {
+        let regexp = /^[_a-z0-9]{6,}$/
+        if(regexp.test(str)){
+            return document.getElementById("display").innerHTML = "Done !!";
+        }
+        else {
+            return document.getElementById("display").innerHTML = "please enter the correct format ";
+        }
+    }
+    function start() {
+        let str = document.getElementById("addAccount");
+        validateAccount(str.value)
+    }
+</script>
+</body>
+</html>
