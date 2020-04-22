@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docready()">
+<p>
+<p id= "game"></p>
+<p id = "barrier"></p>
+</p>
+<script>
+    // khai bao class "Car"
+    class Barrier {
+        constructor(amount,srcImage) {
+            this.amount = amount ;
+            this.srcImage = srcImage
+        }
+        displayBarrier(){
+            let a = "";
+            for (let i =0 ; i < this.amount ; i++ ){
+               a += '<img width="'+100+'"'+ 'height="'+100+'"' +'src="'+this.srcImage+'"' +'style="position: absolute ; top:' + Math.random()*1000+ 'px ; left: '+Math.random()*1000+'px ">';
+            }
+                return a ;
+        }
+    }
+
+    class Car{
+        constructor(speed,srcImage,top,left) {
+            this.speed = speed ;
+            this.srcImage = srcImage ;
+            this.top = top ;
+            this.left = left ;
+        }
+        displayCar(){
+            return '<img width="'+100+'"'+ 'height="'+100+'"' +'src="'+this.srcImage+'"' +'style="position: absolute ; top:' + this.top+ 'px ; left: '+this.left+'px ">';
+        }
+        moveUp(){
+                this.top -= this.speed ;
+        }
+        moveDown(){
+            this.top += this.speed ;
+        }
+        moveLeft(){
+            this.left -= this.speed;
+        }
+        moveRight(){
+            this.left += this.speed;
+        }
+    }
+    // khai bao car
+    let car = new Car(20,"supercarU.png",500,500)
+    let direction = "";
+    let barrier = new Barrier(3,"supercarD.png");
+    // khai bao ham di chuyen
+    function move() {
+        switch(direction) {
+        case "up": {
+                car.moveUp();
+                break;
+            }
+        case "left": {
+                car.moveLeft();
+                break;
+            }
+        case "down": {
+                car.moveDown();
+                break;
+            }
+        case "right": {
+                car.moveRight();
+                break;
+            }
+        }
+
+        if(car.top == 0 || car.left == 0 || car.top == 600 || car.left == 1400) {
+            alert("you lose")
+        }
+        else {
+            document.getElementById("game").innerHTML=car.displayCar()
+            setTimeout(move, 100)
+        }
+    }
+
+    function docready() {
+        window.addEventListener("keydown",start)
+        document.getElementById("barrier").innerHTML=barrier.displayBarrier()
+        move();
+    }
+    function start(evt) {
+        switch(evt.keyCode) {
+            case 38: {
+                direction="up";
+                car.srcImage="supercarU.png";
+                break;
+            }
+            case 37: {
+                direction="left";
+                car.srcImage="supercarL.png";
+                break;
+            }
+            case 39: {
+                direction="right";
+                car.srcImage="supercarR.png";
+                break;
+            }
+            case 40: {
+                direction="down";
+                car.srcImage="supercarD.png";
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>

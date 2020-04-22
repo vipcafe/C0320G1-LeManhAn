@@ -9,43 +9,66 @@
     class mouse {
         constructor(name,weight,speed,status) {
             this.name = name ;
-            this.weight = weight ;
             this.speed = speed ;
             this.status = status ;
+            this.weight = weight ;
         }
+
         mouseSay(){
-            alert("chít chít")
+            if( this.status === "die"){
+                alert("...................");
+            }
+            else if( this.status === "alive"){
+                alert(this.name +" : chít chít")
+            }
         }
         mouseSay2(){
-            alert("Do anh bat duoc em")
-        }
-        setStatus(){
-            if(status === "alive"){
-                this.mouseSay();
-            }
-            else if(status === "die"){
-                alert("Chuột đã từ trần")
-            }
+            alert(this.name + "đố a bắt được e");
         }
     }
     class cat {
-        constructor(name,weight,speedPlus) {
+        constructor(name,weight,speedPlus,mouse) {
             this.name = name ;
-            this.weight =weight ;
-            this.speedP
+            this.weight = weight ;
+            this.speedPlus =speedPlus ;
+            this.mouse = mouse ;
         }
         catSay(){
-            alert("Meo Meo !!")
+            alert(this.name+" : Meo Meo !!")
         }
-        catSay2(){
-            alert("May chet vs Anh")
+
+        eatMouse(){
+            if(this.mouse.status === "die"){
+                alert(this.name + ": chet roi ko an")
+            }
+            else  if(this.mouse.status === "alive") {
+                let sum = this.weight + this.mouse.weight ;
+                alert("Meo tu "+ this.weight + "kg lên " + sum +" kg");
+            }
         }
-        PlusSpeed(){
-            if(this.speedP<this.mouse.speed){
-                this.PlusSpeed()
+        batchuot(){
+            if(this.mouse.status === "alive") {
+                if (this.speedPlus < this.mouse.speed) {
+                    this.speedPlus++;
+                    alert("Tốc độ tăng : "+this.speedPlus+"\nvồ hụt !!" );
+                    this.mouse.mouseSay2();
+                    return this.batchuot();
+                } else {
+                    alert("TOANG \nChén thôi")
+                    this.eatMouse();
+                }
+            }
+            else if(this.mouse.status === "die"){
+                this.eatMouse();
+                alert(this.name + " bỏ đi");
             }
         }
     }
+    let jerry = new mouse("jerry",3,25,"alive") ;
+    jerry.mouseSay();
+    let tom = new cat ('Tom',7,20,jerry);
+    tom.catSay();
+    tom.batchuot();
 </script>
 </body>
 </html>

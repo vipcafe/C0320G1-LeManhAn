@@ -6,11 +6,17 @@
 </head>
 <body>
 <script>
+    class apple{
+        constructor(weight) {
+            this.weight = weight ;
+        }
+    }
     class human {
-        constructor(name,gender,weight) {
+        constructor(name,gender,weight,food) {
             this.name = name ;
             this.gender = gender ;
             this.weight = weight ;
+            this.food = food ;
         }
         isMale (){
             if (this.gender == 0){
@@ -37,31 +43,41 @@
             }
         }
         eatApple(){
-            alert(this.name +" Can 1 mieng \nTáo ngon quá , ăn thêm miếng nữa ");
+            if(this.food.weight > 0 ){
+                alert(this.name +" Can 1 mieng \nngon quá , ăn thêm miếng nữa ");
+                this.food.weight -= 1;
+                this.weight += 1
+                alert(this.name + " weight :"+ this.weight)
+            }
+            else {
+                alert("het tao roi")
+            }
         }
     }
-    let adam = new human("Adam",0,54)
+    function shareApple(){
+        alert(" App nang :" + apple1.weight);
+        if(apple1.weight >0){
+        if(apple1.weight >0){
+            adam.eatApple();
+        }
+        if(apple1.weight >0){
+            eva.eatApple();
+        }
+        return shareApple();
+        }
+        else {
+            alert("het tao roi")
+        }
+    }
+    let apple1 = new apple(7);
+    let adam = new human("Adam",0,54,apple1)
     adam.story();
-    let eva = new human("Eva",1,45)
+    let eva = new human("Eva",1,45,apple1)
     eva.story();
     adam.story2();
     eva.story2();
-    eatApple(6);
-    function eatApple(weight) {
-        let count = 1 ;
-        let sum = weight;
-        while (count<=weight){
-                adam.eatApple();
-                count++;
-                sum= sum -1 ;
-                alert("khoi luong trai tao con : " + sum )
-                eva.eatApple();
-                count++;
-                sum= sum -1 ;
-                alert("khoi luong trai tao con : " + sum )
-        }
-        alert("het me trai tao roi")
-    }
+    shareApple();
+
 
 </script>
 </body>
