@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function addToArry(value) {
+        let arr = [];
+        for (i=0;i<value;i++){
+            arr[i]= i;
+        }
+        return arr;
+    }
+
+     let a = addToArry(10000000);
+    // b = prompt("Nhap So luong Phan Tu trong Mang")
+    // a = addToArry(b);
+
+    function  MinToMax(a,b) {
+        return a-b ;
+    }
+    function binarySearch(arr,data) {
+        let mid = parseInt(arr.length / 2);
+        let check = false;
+        arr = arr.sort(MinToMax);
+        if (arr.length > 1) {
+            if (data == arr[mid]) {
+                return check = true;
+            }
+            if (data > arr[mid]) {
+                arr = arr.slice(mid);
+                return binarySearch(arr, data);
+            }
+            if (data < arr[mid]) {
+                arr = arr.slice(0, mid);
+                return binarySearch(arr, data);
+            }
+        } else {
+            if (arr[0] == data) {
+                return check = true;
+            }
+        }
+    }
+    function sequentialSearch(arr,data){
+        let check = false ;
+        for(i=0;i<arr.length;i++){
+            if(arr[i]==data){
+                return check = true ;
+                break;
+            }
+        }
+    }
+     let c = prompt("Nhap so muon tim kiem");
+    function start(arr,data) {
+        let setTime1 = Date.now();
+        let a = binarySearch(arr,data);
+        let setTime = Date.now() - setTime1;
+        if (a === true) {
+            alert("you win !!!" + "\nThoi gian thuc hien chuong trinh nhi phan : " + setTime + " Milisecon");
+        }
+        let setTime3 = Date.now();
+        let b = sequentialSearch(arr,data);
+        let setTime4 = Date.now() - setTime3;
+        if (b === true){
+            alert("Thoi gian thuc hien chuong trinh Chinh tuyen : " + setTime4 +" Milisecon" )
+        }
+    }
+    start(a,c)
+</script>
+</body>
+</html>

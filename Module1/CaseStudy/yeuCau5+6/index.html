@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let count=2;
+    let infomation = [
+        "Name :", "Số CMND :", "Ngày tháng Năm sinh : ", "Địa Chỉ :", "email :",
+        "Thành viên :","Số Lượng người :", "Loại Dịch Vụ :", "Số Ngày Thuê :",
+        "Loại Phòng thuê :", "Tổng số tiền phải trả :"
+    ];
+    let addInfomation = [["An DuBai (VIP)","212412071","12/01/1994","Quang Ngai","Vipcafe1994@gmail.com","Diamond","1","Villa",999,"Business","499500 $"],["Sinh","212412071","12/01/1994","Quang Ngai","Vipcafe1994@gmail.com","Diamond","1","Villa",999,"Business","499500 $"]];
+    //----------------DISPLAY MAIN MENU ------------------------------------------
+    function displayMainMenu() {
+        document.body.innerText = "";
+        let sout = "<div style='text-align: center'><h1 style='color: darkblue'>MAIN MENU</h1>";
+        sout+="<button type='button' style='width: 180px ;height: 40px' onclick='addNewCustomer("+count+")'>ADD NEW CUSTOMER</button><br>";
+        sout+="<button type='button' style='width: 180px ;height: 40px' onclick='displayInformationCustomer()'>INFOMATION CUSTOMER</button><br>";
+        sout+="<button type='button' style='width: 180px ;height: 40px' onclick='editInformationCustomer()'>EDIT INFOMATION CUSTOMER</button><br>";
+        sout+="<button type='button' style='width: 180px ;height: 40px' onclick='deleteInformationCustomer()'>DELETE INFOMATION CUSTOMER</button><br>";
+        sout+="<h3 style='color: brown'>Hiện đang có "+count+" khách hàng</h3>"
+        sout+="</div>";
+        return document.write(sout)
+    }
+    //================================================ADD NEW CUSTOMER ====================================================
+
+    //-------------------------Name ---------------------------------------
+    function name(index) {
+        addInfomation[index][0]=prompt("vui lòng nhập : "+infomation[0])
+        if(addInfomation[index][0] === ""){
+            alert("vui lòng không để trống")
+            return name();
+        }
+        else if(addInfomation[index][0] ==null){
+            return false ;
+        }
+        else {
+            while (true){
+                let name = "" ;
+                addInfomation[index][0]=addInfomation[index][0].trim().toLowerCase();
+                for(let i=0 ; i < addInfomation[index][0].length ; i++){
+                    if(addInfomation[index][0].charAt(i) === " " && addInfomation[index][0].charAt(i+1)===" "){
+                        continue ;
+                    }
+                    if(i===0 || addInfomation[index][0].charAt(i-1) === " ") {
+                        name += addInfomation[index][0].charAt(i).toUpperCase();
+                        continue;
+                    }
+                    name+= addInfomation[index][0].charAt(i);
+                }
+                addInfomation[index][0]=name ;
+                return true ;
+            }
+        }
+    }
+    //--------------------------Check CMND ---------------------------------------
+    function cmnd(index) {
+        while (true){
+            addInfomation[index][1]=prompt("vui lòng nhập : "+infomation[1])
+            if(addInfomation[index][1] === ""){
+                alert("vui lòng không để trống")
+            }
+            else {
+                let regexp = /^[0-9]{9}$/
+                if(regexp.test(addInfomation[index][1])){
+                    return true
+                }
+                else {
+                    alert("vui Lòng nhập cmnd gồm 9 ký tự là số")
+                }
+            }
+        }
+
+    }
+    //---------------------BIRTHDAY --------------------------------------------------
+    function birthday(index) {
+        while (true) {
+            addInfomation[index][2] = prompt("vui lòng nhập : " + infomation[2])
+            if (addInfomation[index][2] === ""||addInfomation[index][2] ==null) {
+                alert("vui lòng không để trống")
+            } else {
+                if (addInfomation[index][2].charAt(2) === "/" && addInfomation[index][2].charAt(5) === "/") {
+                    let day = addInfomation[index][2].substring(0, 2);
+                    let month = addInfomation[index][2].substring(3, 5);
+                    let year = addInfomation[index][2].substring(6, 10);
+                    if ((day != parseFloat(day)) || (month != parseFloat(month)) || (year != parseFloat(year))) {
+                        alert(" vui long nhap birthday theo dinh dang dd/mm/yyyy");
+                        return birthday(index)
+                    }
+                    if (year < 1951) {
+                        alert(" vui long nhap birthday theo dinh dang dd/mm/yyyy");
+                        return birthday(index)
+                    } else {
+                        return true;
+                    }
+                } else {
+                    alert(" vui long nhap birthday theo dinh dang dd/mm/yyyy");
+                    return birthday(index)
+                }
+            }
+        }
+    }
+    //---------------------------------ADDRESS ----------------------------
+    function address(index) {
+        while (true) {
+            addInfomation[index][3] = prompt("vui lòng nhập " + infomation[3]||addInfomation[index][2] ==null)
+            if (addInfomation[index][3] === "") {
+                alert("vui lòng không để trống")
+                }
+            else {
+                return true ;
+
+            }
+        }
+    }
+    //---------------------------------EMAIL ---------------------------
+        function email(index) {
+            while (true) {
+                addInfomation[index][4] = prompt("vui lòng nhập " + infomation[4])
+                if (addInfomation[index][4] === ""||addInfomation[index][2] ==null) {
+                    alert("vui lòng không để trống")
+                } else {
+                    let regexp = /^[a-zA-Z0-9]+[a-zA-Z0-9_]*@[a-zA-Z-0-9]+([\.[a-zA-Z0-9]+)$/
+                    if(regexp.test(addInfomation[index][4])){
+                        return true
+                    }
+                    else {
+                        alert("vui lòng nhập email theo định dạng : xxxx@xxx.xxx")
+                    }
+                }
+            }
+        }
+    //-------------------------------Menber--------------------------------------
+    function member(index) {
+        while (true) {
+            addInfomation[index][5] = prompt("vui lòng nhập " + infomation[5] + "\n1.Sliver \n2.Gold \n3.Pladinum \n4.Diamond")
+            if (addInfomation[index][5] === "") {
+                alert("vui lòng không để trống")
+            } else {
+                switch (parseInt(addInfomation[index][5])) {
+                    case 1 :
+                        addInfomation[index][5] = "Sliver";
+                        return true;
+                        break;
+                    case 2 :
+                        addInfomation[index][5] = "Gold";
+                        return true;
+                        break;
+                    case 3 :
+                        addInfomation[index][5] = "Platinum";
+                        return true;
+                        break;
+                    case 4 :
+                        addInfomation[index][5] = "Diamond";
+                        return true;
+                        break;
+                    default :
+                        alert("Vui lòng nhập theo quy định");
+                        return member() ;
+                }
+            }
+        }
+    }
+
+    //-------------------------------------nount --------------
+    function nount(index) {
+        while (true) {
+            addInfomation[index][6] = prompt("vui lòng nhập " + infomation[6]||addInfomation[index][2] ==null)
+            if (addInfomation[index][6] === "") {
+                alert("vui lòng không để trống")
+            } else {
+                if(isNaN(addInfomation[index][6])){
+                    alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                    return nount(index);
+                }
+                else {
+                    if(addInfomation[index][6] == parseInt(addInfomation[index][6])){
+                        if(addInfomation[index][6]>0){
+                            return true ;
+                        }
+                        else {
+                            alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                            return nount(index) ;
+                        }
+                    }
+                    else {
+                        alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                        return nount(index);
+                    }
+                }
+            }
+        }
+    }
+        //---------------------------------------------SERVICE ----------------------------
+    function service(index) {
+        while (true) {
+            addInfomation[index][7] = prompt("vui lòng nhập " + infomation[7] + "\n1.Villa \n2.House \n3.Rom ")
+            if (addInfomation[index][7] === "") {
+                alert("vui lòng không để trống")
+            } else {
+                switch (parseInt(addInfomation[index][7])) {
+                    case 1 :
+                        addInfomation[index][7] = "Villa";
+                        return true;
+                        break;
+                    case 2 :
+                        addInfomation[index][7] = "House";
+                        return true;
+                        break;
+                    case 3 :
+                        addInfomation[index][7] = "Rom";
+                        return true;
+                        break;
+                    default :
+                        alert("Vui lòng nhập theo quy định");
+                        return member(index) ;
+                }
+            }
+        }
+    }
+//--------------------------------RENDAY ----------------------
+    function renday(index) {
+        while (true) {
+            addInfomation[index][8] = prompt("vui lòng nhập " + infomation[8]||addInfomation[index][2] ==null)
+            if (addInfomation[index][8] === "") {
+                alert("vui lòng không để trống")
+            } else {
+                if(isNaN(addInfomation[index][8])){
+                    alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                    return nount(index);
+                }
+                else {
+                    if(addInfomation[index][8] == parseInt(addInfomation[index][8])){
+                        if(addInfomation[index][8]>0){
+                            return true ;
+                        }
+                        else {
+                            alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                            return nount(index) ;
+                        }
+                    }
+                    else {
+                        alert("vui lòng nhập số nguyên dương lớn hơn 0")
+                        return nount(index);
+                    }
+                }
+            }
+        }
+    }
+    //------------------------------ROM-----------------------------------
+    function rom(index) {
+        while (true) {
+            addInfomation[index][9] = prompt("vui lòng nhập " + infomation[9] + "\n1.Normal \n2.Vip \n3.Business ")
+            if (addInfomation[index][9] === ""||addInfomation[index][2] ==null) {
+                alert("vui lòng không để trống")
+            } else {
+                switch (parseInt(addInfomation[index][9])) {
+                    case 1 :
+                        addInfomation[index][9] = "Normal";
+                        return true;
+                        break;
+                    case 2 :
+                        addInfomation[index][9] = "Vip";
+                        return true;
+                        break;
+                    case 3 :
+                        addInfomation[index][9] = "Business";
+                        return true;
+                        break;
+                    default :
+                        alert("Vui lòng nhập theo quy định");
+                        return rom(index) ;
+                }
+            }
+        }
+    }
+    //=============BUTTOM THEM NGUOI DUNG =============
+
+    //===================== DISPLAY INFORMATION CUSTOMER =========================
+    function displayInformationCustomer(){
+        document.body.innerHTML="";
+        let sount="<table border='1'><h1>Danh Sách người dùng</h1>"
+        for (let i = 0 ;i < addInfomation.length;i++){
+            sount+="<tr>"
+            sount+="<td style='width: 200px'>"+addInfomation[i][0]+"</td>";
+            sount+="<td><button type='button' onclick='displayInformation("+i+")'>Information</td>"
+            sount+= "</tr>"
+        }
+        sount+="</table><button type='button' onclick='displayMainMenu()'>Come Back</button>"
+        document.write(sount);
+    }
+    //----------------------------------DISPLAY INFORMATION-----------------------
+    function displayInformation(index){
+        document.body.innerHTML="";
+        let sount="<table border='1'  ><h1>Danh Sách người dùng</h1>"
+        for (let i = 0 ;i < addInfomation[index].length;i++){
+            sount+="<tr>"
+            sount+="<td style='width: 150px'>"+infomation[i]+"</td>";
+            sount+="<td style='width: 200px'>"+addInfomation[index][i]+"</td>";
+            sount+= "</tr>"
+        }
+        sount+="</table><button type='button' onclick='displayInformationCustomer()'>Come Back</button>"
+        document.write(sount);
+    }
+    //====================================== EDIT INFORMATION ====================================
+    function editInformationCustomer(){
+        document.body.innerHTML="";
+        let sount="<table border='1'><h1>Danh Sách người dùng</h1>"
+        for (let i = 0 ;i < addInfomation.length;i++){
+            sount+="<tr>"
+            sount+="<td style='width: 200px'>"+addInfomation[i][0]+"</td>";
+            sount+="<td><button type='button' onclick='editInformation("+i+")'>Edit Information</td>"
+            sount+= "</tr>"
+        }
+        sount+="</table><button type='button' onclick='displayMainMenu()'>Come Back</button>"
+        document.write(sount);
+    }
+    function editInformation(index){
+        while(true){
+             result ="";
+             result = prompt("Nhập cột muốn sửa và nhập '999' để thoát : " +
+                "\n1."+infomation[0]+addInfomation[index][0]+
+                "\n2."+infomation[1]+addInfomation[index][1]+
+                "\n3."+infomation[2]+addInfomation[index][2]+
+                "\n4."+infomation[3]+addInfomation[index][3]+
+                "\n5."+infomation[4]+addInfomation[index][4]+
+                "\n6."+infomation[5]+addInfomation[index][5]+
+                "\n7."+infomation[6]+addInfomation[index][6]+
+                "\n8."+infomation[7]+addInfomation[index][7]+
+                "\n9."+infomation[8]+addInfomation[index][8]+
+                "\n10."+infomation[9]+addInfomation[index][9])
+            result=parseInt(result);
+            switch (result) {
+                case 1 :
+                    name(index);
+                    break;
+                case 2 :
+                    cmnd(index);
+                    break;
+                case 3 :
+                    birthday(index);
+                    break;
+                case 4 :
+                    address(index);
+                    break;
+                case 5 :
+                    email(index);
+                    break;
+                case 6 :
+                    member(index);
+                    break;
+                case 7 :
+                    nount(index);
+                    break;
+                case 8 :
+                    service(index);
+                    moneyPlus(index);
+                    break;
+                case 9 :
+                    renday(index);
+                    break;
+                case 10 :
+                    rom(index);
+                    break;
+                case 999 :
+                    editInformationCustomer();
+                    return true ;
+                default :
+                    return editInformation(index)
+            }
+        }
+
+        displayInformationCustomer()
+    }
+    //=============DELETE ===================
+    function deleteInformationCustomer(){
+        document.body.innerHTML="";
+        let sount="<table border='1'><h1>Danh Sách người dùng</h1>"
+        for (let i = 0 ;i < addInfomation.length;i++){
+            sount+="<tr>"
+            sount+="<td style='width: 200px'>"+addInfomation[i][0]+"</td>";
+            sount+="<td><button type='button' onclick='deleteInformation("+i+")'>Delete</td>"
+            sount+= "</tr>"
+        }
+        sount+="</table><button type='button' onclick='displayMainMenu()'>Come Back</button>"
+        document.write(sount);
+    }
+    function deleteInformation(index) {
+        if (index == 0) {
+            alert(addInfomation[index][0]+" Là TK VIP Bạn không thể xóa được người này !!")
+            deleteInformationCustomer();
+        } else {
+                if (confirm("Ban có chắc chắn muốn xóa người này không ?")) {
+                    addInfomation.splice(index, 1)
+                    deleteInformationCustomer();
+                    count = count - 1;
+                }
+        }
+    }
+    //----------------------------Start -----------------------------------
+    function moneyPlus(index) {
+        let money;
+        if(addInfomation[index][7] === 'Villa'){
+            money = 500 * addInfomation[index][8];
+        }
+        else if(addInfomation[index][7] === 'House'){
+            money = 300 * addInfomation[index][8];
+        }
+        else if(addInfomation[index][7] === 'Rom'){
+            money = 100 * addInfomation[index][8];
+        }
+        addInfomation[index][10] = parseInt(money) + " $" ;
+        alert(addInfomation[index][10])
+    }
+    //==============================================================================
+    function addNewCustomer(index){
+        addInfomation[index]= new Array();
+                if(name(index)==false){
+                    addInfomation.splice(index,1)
+                    return displayMainMenu();
+                }
+                else {
+                    cmnd(index);
+                    birthday(index);
+                    address(index);
+                    email(index);
+                    member(index);
+                    nount(index);
+                    service(index);
+                    renday(index);
+                    rom(index);
+                    moneyPlus(index);
+                    count++;
+                    displayMainMenu();
+                    alert("Thêm thành công : "+addInfomation[index][0])
+                }
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

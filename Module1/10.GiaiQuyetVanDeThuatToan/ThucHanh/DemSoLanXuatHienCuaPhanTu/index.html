@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function arrRandom(arr,max) {
+        for (i=0;i<max;i++){
+            arr.push(parseInt(Math.random()*100))
+        }
+    }
+    function search(arr,data) {
+        count = 0 ;
+        location1 = [];
+        for (let i = 0 ; i<arr.length ; i++){
+            if(arr[i]==data){
+                count ++;
+                location1.push(i);
+            }
+        }
+        return alert("So lan xuat hien cua "+ data +" la : "+count+"\nTai Vi tri : "+ location1)
+    }
+    let a =[];
+    arrRandom(a,100)
+    alert(a)
+    let b=prompt("Nhap Gia Tri Muon Tim Kiem");
+    search(a,b)
+</script>
+</body>
+</html>

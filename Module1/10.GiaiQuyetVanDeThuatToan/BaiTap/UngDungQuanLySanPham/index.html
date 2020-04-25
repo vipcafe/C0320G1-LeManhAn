@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let arrayProduct = [];
+    function displayProduct() {
+        document.body.innerHTML="";
+        let sout ="<h1 style='color: darkblue'>THÊM SẢN PHẨM</h1>"
+            sout += "<input type ='text' id='product'><button type='button' onclick='getproduct()'>ADD</button>";
+        sout+="<table>";
+        for(let i = 0; i<arrayProduct.length;i++){
+            sout+="<tr>"
+            sout+="<td>"+arrayProduct[i]+"</td>";
+            sout+="<td><button type='button' onclick='editProduct("+i+")'>Edit</button></td>"
+            sout+="<td><button type='button' onclick='deleteProduct("+i+")'>Delete</button></td>"
+            sout+="</tr>"
+        }
+        sout+="</table></div>"
+        document.write(sout);
+    }
+    function getproduct() {
+        let product = document.getElementById("product").value ;
+        addProduct(product)
+
+    }
+    function addProduct(product) {
+        if(product === ""){
+            alert("Vui lòng nhập tên sản phẩm ")
+        }
+        else {
+            arrayProduct.push(product);
+            displayProduct();
+        }
+    }
+    function editProduct(index){
+        let product = prompt("Nhap Ten San Pham De Sua : ");
+        arrayProduct[index] = product ;
+        displayProduct()
+    }
+    function deleteProduct(index) {
+        if(confirm("Bạn có thật sự muốn xóa product " + arrayProduct[index]+" hay không?")) {
+            arrayProduct.splice(index,1)
+        }
+        displayProduct();
+    }
+    displayProduct();
+</SCRIPT>
+</body>
+</html>
