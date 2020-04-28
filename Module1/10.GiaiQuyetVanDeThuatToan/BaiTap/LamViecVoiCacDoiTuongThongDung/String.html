@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: darkblue">"Tôi yêu ngôn ngữ lập trình Javascript" <br>Hãy đếm số lần xuất hiện của chữ 'a' ở trong chuỗi trên.</h3>
+<button type="button" onclick="start()">Click me !!</button>
+<h3 style="color: darkblue">"Tôi yêu ngôn ngữ lập trình Javascript" <br>Hãy tách chuỗi trên vào trong một mảng các chuỗi. Mỗi từ là một phần từ.</h3>
+<button type="button" onclick="start1()">Click me !!</button>
+<h3 style="color: darkblue">"Tôi yêu ngôn ngữ lập trình Javascript" <br>Đếm số lượng từ có trong chuỗi trên</h3>
+<button type="button" onclick="start2()">Click me !!</button>
+
+<script>
+    let string = 'Tôi yêu ngôn ngữ lập trình Javascript';
+    function find_a(string) {
+        count = 0 ;
+        for (let i =0 ; i<string.length ;i++){
+            if(string.charAt(i) === "a"){
+                count++
+            }
+        }
+        return alert("Chu a xuat hien "+ count + " lan");
+    }
+    function start(){
+        find_a(string);
+    }
+//-------------------------------------------------------------------------
+    let arr = new Array();
+    function splitString(string) {
+        string = string.trim();
+        let arrString = new Array();
+        let min = 0
+        for (let i=1;i<=string.length; i++){
+            if(i==string.length) {
+                arrString[i]=string.substring(min,i);
+                arr.push(arrString[i]);
+            }
+            else if(string.charAt(i)==" "&&string.charAt(i-1) !=" "  ){
+                arrString[i]=string.substring(min,i);
+                arr.push(arrString[i]);
+                min = i;
+            }
+        }
+        return arr;
+    }
+    function start1(){
+       alert("arr =[" +splitString(string)+"]")
+        arr = [];
+    }
+//------------------------------------------------------------------
+
+function countString() {
+    string = string.trim();
+    let count = 0
+    for (let i=1;i<=string.length; i++){
+        if(i==string.length) {
+            count++;
+        }
+        else if(string.charAt(i)==" "&&string.charAt(i-1) !=" "  ){
+            count++;
+        }
+    }
+    return count;
+}
+function start2(){
+    alert(countString(string))
+}
+
+</script>
+</body>
+</html>

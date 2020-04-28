@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: darkblue" >RANDOM</h3>
+<button type="button" onclick="start()">CLICK ME!!</button>
+<h3 style="color: darkblue" >Find min arr=[5,7,2,9]</h3>
+<button type="button" onclick="start1()">CLICK ME!!</button>
+<h3 style="color: darkblue" >Lũy thừa 53</h3>
+<button type="button" onclick="start2()">CLICK ME!!</button>
+<h3 style="color: darkblue" >Diện tích hình tròn bán kính 5cm</h3>
+<button type="button" onclick="start3()">CLICK ME!!</button>
+<script>
+    //----------------------RANDOM --------------------------
+    function randomMax(start,end) {
+        let random1 = parseInt(Math.random()*(end-start))+start;
+        return random1 ;
+    }
+    function start(){
+        alert("Random 0-10 : "+randomMax(0,10))
+        alert("Random 0-400 : "+randomMax(0,400))
+        alert("Random 50-100 : "+randomMax(50,100))
+    }
+    //--------------------FIND MIN ---------------
+    let arr = [5,7,2,9];
+    function findMin(arr) {
+        let min = arr[0];
+
+        for(let i=1;i<arr.length;i++){
+            if(min>arr[i]){
+                min =arr[i]
+            }
+        }
+        return alert(min);
+    }
+    function start1(){
+        findMin(arr)
+    }
+//---------------Lũy thừa --------------
+    function exponential_53(number) {
+    let sumbit = number ;
+    for (let i=1 ; i<=53;i++){
+        sumbit=sumbit*number
+    }
+    return sumbit;
+    }
+    function start2(){
+      let addstring = prompt("Nhap so muon luy thua 53")
+      alert(exponential_53(addstring));
+    }
+//---------------circle area ---------------
+    function circle_area(number) {
+        let pi = 3.14;
+        return pi*(number*number);
+    }
+    function start3(){
+        alert(circle_area(5));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function theTime() {
+        let birthday = new Date(1994,1,12);
+        let today =  Date.now()
+        alert(today)
+        let theTime = today - birthday ;
+        let second = theTime/1000;
+        let minute = second/60;
+        let hours = minute/60;
+        let day = hours/24;
+        let month = day /30;
+        let year = day/365
+         alert("Tôi đã sống được "+second+" Giây");
+         alert("Tôi đã sống được "+minute+" phút");
+         alert("Tôi đã sống được "+hours+" giờ");
+         alert("Tôi đã sống được "+day+" ngày");
+         alert("Tôi đã sống được "+month+" tháng");
+         alert("Tôi đã sống được "+year+" Năm");
+    }
+    theTime();
+</script>
+</body>
+</html>
