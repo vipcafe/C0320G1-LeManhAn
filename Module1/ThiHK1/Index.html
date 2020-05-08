@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: darkblue" > Bài 1 </h1>
+<button type="button" onclick="chiahetcho3()">Click me !!!</button>
+<h1 style="color: darkblue" > Bài 2 </h1>
+<button type="button" onclick="sohoanhao()">Click me !!!</button>
+<h1 style="color: darkblue" > Bài 3 </h1>
+<button type="button" onclick="kiemtrangaythang()">Click me !!!</button>
+<h1 style="color: darkblue" > Bài 4 </h1>
+<button type="button" onclick="congnhan1.start(congnhan1.count)">Click me !!!</button>
+<h3 id ="Display"></h3>
+<script>
+    let arr = new Array()
+    function chiahetcho3(n) {
+        let sum = 0 ;
+        let count = 0 ;
+        n =prompt("Nhập số lượng phần tử mảng");
+        if(n<50){
+            for (let i=0 ; i<n ; i++){
+                arr[i] = prompt("Nhap Phan tu thu " + (i+1))
+            }
+            for (let i=0 ; i < arr.length ;i++){
+                if(arr[i]%3==0){
+                    sum+= parseInt(arr[i])
+                    count ++
+                }
+            }
+            sum = sum/count
+        }
+        else {
+            alert("vui Long nhap lai so va phan tu khong qua 50")
+        }
+        return alert(sum)
+    }
+    // ----------------------------------//------------------------------------
+
+    function sohoanhao() {
+        let n = prompt("Nhap so muon kiem tra :");
+        let sum =0 ;
+        for(let i = 0 ; i< n ; i++){
+            if(n%i==0){
+                sum += i ;
+            }
+        }
+        if(sum == n){
+             alert(n+" true la so hoan hao")
+        }
+        else {
+            alert(n + " false ko phai la so hoan hao")
+        }
+    }
+
+    //---------------------//---------------------------------------------------------
+    function kiemtrangaythang() {
+        while (true) {
+            ngaythang =prompt("Nhap ngay thang")
+            ngaydemduoc = 0 ;
+            if (ngaythang === ""|| ngaythang ==null) {
+                alert("vui lòng không để trống")
+            } else {
+                if (ngaythang.charAt(2) === "/" && ngaythang.charAt(5) === "/") {
+                    let day = ngaythang.substring(0, 2);
+                    let month = ngaythang.substring(3, 5);
+                    let year = ngaythang.substring(6, 10);
+                    if ((day != parseFloat(day)) || (month != parseFloat(month)) || (year != parseFloat(year))) {
+                        alert(" vui long nhap ngay thang theo dinh dang dd/mm/yyyy");
+                        return kiemtrangaythang()
+                    }
+                    if(day>30){
+                        alert(" vui long nhap ngay thang theo dinh dang dd/mm/yyyy");
+                        return kiemtrangaythang()
+                    }
+                    if(month>12){
+                        alert(" vui long nhap ngay thang theo dinh dang dd/mm/yyyy");
+                        return kiemtrangaythang()
+                    }
+                    if (year < 1951) {
+                        alert(" vui long nhap ngay thang theo dinh dang dd/mm/yyyy");
+                        return kiemtrangaythang()
+                    } else {
+
+                        switch (month) {
+                            case "01":
+                                ngaydemduoc += parseInt(day);
+                                break;
+                            case "02":
+                                ngaydemduoc += 31 + parseInt(day);
+                                break;
+                            case "03":
+                                ngaydemduoc += 59 + parseInt(day);
+                                break;
+                            case "04" :
+                                ngaydemduoc += 90 + parseInt(day);
+                                break
+                            case "05" :
+                                ngaydemduoc += 120 + parseInt(day);
+                                break
+                            case "06" :
+                                alert(null)
+                                ngaydemduoc += (151 + parseInt(day));
+                                break
+                            case "07":
+                                ngaydemduoc += (181 + parseInt(day));
+                                break
+                            case "08":
+                                ngaydemduoc += 212 + parseInt(day);
+                                break
+                            case "09":
+                                ngaydemduoc += 243 + parseInt(day);
+                                break
+                            case 10:
+                                ngaydemduoc += 274 + parseInt(day);
+                                break
+                            case 11:
+                                ngaydemduoc += 304 + parseInt(day);
+                                break
+                            case 12:
+                                ngaydemduoc += 335 + parseInt(day);
+                                break
+                        }
+                        return alert(ngaythang + " Hop Le\nHom nay la ngay thu " + ngaydemduoc + " trong nam" );
+                    }
+                } else {
+                    alert(" vui long nhap birthday theo dinh dang dd/mm/yyyy");
+                    return kiemtrangaythang()
+                }
+            }
+        }
+    }
+    //---------------------------------------------------------------------------
+
+    class congnhan{
+        constructor() {
+            this.information = ["Họ tên : ","Số điện thoại :" , "Ngày tháng năm sinh" , "Địa chỉ :" , "Lương :", "chức vụ"]
+            this.status = [["nguyen van A ", "0886622577" , "12/01/1994" , "QN" ,"1000000 tr ", "Boss"]]
+            this.count = 1 ;
+
+        }
+        name(index){
+            this.status[index][0] = prompt("Nhap ho va ten")
+            alert(this.status[index][0])
+        }
+        sodienthoai(index){
+            this.status[index][1] = prompt("Nhap "+this.information[1])
+        }
+        ngaythangnamsinh(index){
+            this.status[index][2] = prompt("Nhap "+this.information[2])
+        }
+        diachi(index){
+            this.status[index][3] = prompt("Nhap "+this.information[3])
+        }
+        luonng(index){
+            this.status[index][4] = prompt("Nhap "+this.information[4])
+        }
+        chucvu(index){
+            this.status[index][5] = prompt("Nhap "+this.information[5])
+        }
+        displayCongNhan(){
+            document.getElementById("Display").innerHTML="";
+            let sout = "<table border='1px'><tr>"
+            sout += "<td>STT</td>"
+            sout += "<td>Họ Và tên</td>"
+            sout += "<td>Số Điện Thoại</td>"
+            sout += "<td>Ngày Sinh</td>"
+            sout += "<td>Địa Chỉ</td>"
+            sout += "<td>Lương</td>"
+            sout += "<td>Chức vụ</td>"
+            sout += "</tr>"
+            for (let i=0 ; i < this.status.length; i++ ){
+                sout += "<tr>"
+                sout +="<td>"+(i+1)+"</td>"
+                for (let j=0 ; j < this.information.length ; j++){
+                    sout += "<td>"+this.status[i][j]+"</td>"
+                }
+                sout+="</tr>"
+            }
+            sout+="</table>"
+            document.getElementById("Display").innerHTML =sout
+        }
+
+        start(index){
+            this.status[index] = new Array();
+            this.name(index);
+            this.sodienthoai(index);
+            this.ngaythangnamsinh(index);
+            this.diachi(index);
+            this.luonng(index);
+            this.chucvu(index);
+            alert(this.status)
+            this.displayCongNhan();
+            this.count++;
+        }
+    }
+    let congnhan1 = new congnhan();
+    congnhan1.displayCongNhan();
+
+
+</script>
+</body>
+</html>

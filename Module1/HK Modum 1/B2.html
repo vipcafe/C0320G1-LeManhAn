@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    fruit = ["Apple","Banana","Lemon",]
+    function Fruit() {
+        let dlt = prompt("Nhap doi tuong can xoa")
+        for(let i=0 ; i < fruit.length; i++){
+            if (dlt === fruit[i]){
+                fruit.splice(i,1)
+            }
+        }
+        return alert(fruit);
+    }
+    Fruit();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    isPrime();
+    function isPrime(){
+        let number = prompt("nhap so nguyen to can tim");
+        let a = true ;
+        for (let j = 2; j <= Math.sqrt(number); j++) {
+            if (number % j == 0) {
+                a = false;
+                break;
+            }
+        }
+        if (a == false) {
+            alert(number +" so nay ko phai so nguyen to")
+            return isPrime(number);
+        }
+        else if( a == true ){
+            alert(number + " la so nguyen to")
+            return isPrime(number);
+        }
+    }
+</script>
+</body>
+</html>

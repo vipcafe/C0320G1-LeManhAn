@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class nhanvien {
+        constructor(name,songaylamviec,mucluong1ngay) {
+            this.name = name ;
+            this.songaylamviec = songaylamviec ;
+            this.mucluong1ngay = mucluong1ngay ;
+        }
+        tinhluong(){
+            return alert(this.name + "\nSo ngay lam viec : " +this.songaylamviec +"\n Muc Luong 1 ngay : " +this.mucluong1ngay +"\nTong tien nhan duoc :"+ this.songaylamviec*this.mucluong1ngay) ;
+        }
+    }
+    let nhanvien1= new nhanvien("Nguyen Van A",20,200000)
+    nhanvien1.tinhluong()
+
+</script>
+</body>
+</html>

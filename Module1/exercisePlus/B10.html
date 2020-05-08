@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    str = "Toi yeu yeu yeu viet Nam Nam"
+    let arr = new Array()
+    function frequency(arr) {
+        let arrNew = arr;
+        let count =[];
+        let countNew = [];
+        for (let i = 0 ; i < arr.length ;i++ ) {
+            let set = 1;
+            count.push(arrNew[i]);
+            for (let j = 0; j <= arrNew.length; j++) {
+                if (arr[i] === arrNew[j]) {
+                    arrNew.splice(i, 0);
+                    countNew[i] = set++
+                }
+            }
+                alert(count[i] + " Xuat hien " + countNew[i])
+        }
+    }
+    function splitString(string) {
+        string = string.trim();
+        let arrString = new Array();
+        let min = 0
+        for (let i=0;i<=string.length; i++){
+            if(i==string.length) {
+                arrString[i]=string.substring(min,i);
+                arr.push(arrString[i]);
+            }
+            else if(string.charAt(i)==" "&&string.charAt(i-1) !=" "  ){
+                arrString[i]=string.substring(min,i);
+                arr.push(arrString[i]);
+                min = i;
+            }
+        }
+        for (let i = 0 ; i < arr.length ;i++){
+             alert(arr[i]);
+        }
+    }
+    splitString(str)
+    frequency(arr)
+</script>
+</body>
+</html>

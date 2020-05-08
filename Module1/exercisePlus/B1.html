@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Println "*" </title>
+</head>
+<body>
+<h1 style="color: darkblue">Println "*" </h1>
+<button type="button" onclick="printlnStar()"> Clikck me !!!</button>
+<br><br>
+<div id="prinStar"></div>
+<script>
+    function  printlnStar() {
+        let number = prompt("Nhap So Luong cot muon in :")
+        let sount = ""
+        for(i=0;i<number;i++){
+           sount += "*****<br>"
+        }
+        document.getElementById("prinStar").innerHTML=sount
+    }
+</script>
+</body>
+</html>

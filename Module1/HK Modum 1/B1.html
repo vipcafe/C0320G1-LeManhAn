@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["Toyota","Mercedes","Hyundai","Daewon"];
+        function findCard() {
+            findcard = prompt("Nhap loai xe can tim")
+        switch (findcard) {
+            case "T" :
+                alert(arr[0]);
+                return findCard()
+            case "M" :
+                alert(arr[1]);
+                return findCard()
+            case "H" :
+                alert(arr[2]);
+                return findCard()
+            case "D" :
+                alert(arr[3]);
+                return findCard()
+            default :
+                return findCard() ;
+        }
+    }
+    findCard()
+</script>
+</body>
+</html>

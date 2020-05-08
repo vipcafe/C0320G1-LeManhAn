@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: darkblue">9.	Nhập vào một chuỗi ký tự  thực hiện công việc sau:<br>
+    a.	In ra chuỗi đảo ngược của chuỗi đã cho<br>
+    b.	Đổi chuổi đã cho sang chữ hoa<br>
+    c.	Đổi chuỗi đã cho sang chữ thường<br>
+    d.	Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ thường và ngược lại)
+</h3>
+<script>
+    //------------------------A----------------------
+    function swap(str) {
+        let swapstr = "";
+        for (let i = str.length ; i >= 0  ; i=i-1){
+            swapstr += str.charAt(i)
+        }
+        return swapstr;
+    }
+    //---------------------D-------------------------
+    function convertUT(str){
+        let strNew = "";
+        for (let i=0 ;i < str.length; i++){
+            if(str.charAt(i) === str.charAt(i).toLocaleLowerCase()){
+                strNew += str.charAt(i).toLocaleUpperCase()
+            }
+            else if(str.charAt(i) === str.charAt(i).toLocaleUpperCase()){
+                strNew += str.charAt(i).toLocaleLowerCase()
+            }
+        }
+        return alert(strNew) ;
+    }
+    //---------------------B && C-----------------------
+
+    str = "Toi Yeu Viet Nam"
+    alert(swap(str))
+    alert(str.toLocaleUpperCase());
+    alert(str.toLocaleLowerCase());
+    convertUT(str)
+</script>
+</body>
+</html>

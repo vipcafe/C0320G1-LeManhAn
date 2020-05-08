@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    arr =new Array()
+
+    function addArr(number) {
+        for(let i=0 ; i < number ;i++){
+            while (arr[i] != parseInt(arr[i])){
+                arr[i]=prompt("Nhap So thu "+(i+1))
+                if(isNaN(arr[i])){
+                    alert("vui long nhap lai")
+                }
+            }
+        }
+        return alert(arr)
+    }
+    function sumArray(arr){
+        sum = 0 ;
+        for (let i=0;i<arr.length ; i++){
+            if(arr[i] > 0){
+                if(arr[i]%2 != 0 ){
+                    sum+= parseInt(arr[i]);
+                }
+            }
+        }
+        return alert(sum)
+    }
+
+    function addInt(arr) {
+        let arrNew = arr
+        let add = prompt("Nhap so Luong phan tu Muon them vao mang");
+        if(isNaN(add)){
+            alert("vui long nhap lai")
+            return addInt(arr);
+        }
+        else if (add == parseInt(add)){
+            addArr(add)
+            sumArray(arr)
+            arr.sort(function (a,b) {
+                return a-b;
+            })
+            alert(arr)
+        }
+        else {
+            alert("vui long nhap lai")
+            return addInt(arr)
+        }
+    }
+
+
+    addInt(arr)
+</script>
+</body>
+</html>
