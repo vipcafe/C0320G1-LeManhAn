@@ -15,20 +15,38 @@ public class index {
         return arr;
     }
 
-    public static void printArray() {
-        int arr[][] = addArray();
+    public static void printArray(int arrN[][]) {
+        int arr[][] = arrN;
         System.out.println("Arr=[");
         for (int i = 0; i < arr.length; i++) {
             System.out.print("[");
             for (int j = 0; j < 9; j++) {
-                System.out.print(arr[i][j] + ",");
+                if (j == 8) {
+                    System.out.print(arr[i][j]);
+                } else {
+                    System.out.print(arr[i][j] + ",");
+                }
+
             }
             System.out.println("]");
         }
         System.out.println("]");
     }
+    public static void findMaxArray(){
+        int arr[][]=addArray();
+        int sum = arr[0][0];
+        for(int i = 0 ;i<arr.length;i++){
+            for (int j = 0 ; j<arr[i].length ; j++){
+                if(sum < arr[i][j]){
+                    sum=arr[i][j];
+                }
+            }
+        }
+        printArray(arr);
+        System.out.println("Số lớn nhất là :"+sum);
+    }
 
     public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
-        printArray();
+        findMaxArray();
     }
 }
