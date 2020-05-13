@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayIndexOutOfBoundsException {
-    public static int[] createRandom() {
+    private static int[] createRandom() {
         Random rd = new Random();
         int[] arr = new int[100];
         System.out.println("Danh sách phần tử của mảng: " );
@@ -18,7 +18,7 @@ public class ArrayIndexOutOfBoundsException {
         int[] arr = new int[100];
         arr = createRandom();
         Scanner scaner = new Scanner(System.in);
-        System.out.println("\nVui lòng nhập chỉ số của một phần tử bất kỳ: ");
+        System.out.println("\nVui lòng nhập position của một phần tử bất kỳ: ");
         try {
             int x = scaner.nextInt();
             System.out.println("Giá trị của phần tử có chỉ số " + x + " là " + arr[x]);
@@ -28,3 +28,4 @@ public class ArrayIndexOutOfBoundsException {
     }
 
 }
+
