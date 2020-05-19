@@ -1,0 +1,8 @@
+package B5.AdvancedObjectOrientedDesign.ThucHanh.Animals.Fruit;
+
+public class Orange extends Fruit {
+    @Override
+    public String howToEat() {
+        return "Orange could be juiced";
+    }
+}
