@@ -1,10 +1,13 @@
 package Models;
 
 public class Villa extends Service {
-    private String romStandard;
-    private String villaDescription;
-    private int numberOfFloors;
-    private double poolArea;
+    private String romStandard; // Tiêu chuẩn của phòng ()
+    private String villaDescription; // Mô tả thêm của villa
+    private int numberOfFloors; // số tầng
+    private double poolArea; // Diện tích bể bơi
+
+    public Villa() {
+    }
 
     public Villa(String romStandard, String villaDescription, int numberOfFloors, double poolArea) {
         this.romStandard = romStandard;
@@ -13,8 +16,8 @@ public class Villa extends Service {
         this.poolArea = poolArea;
     }
 
-    public Villa(String name, double area, double rentalFree, int maxGuest, String rentalType, String romStandard, String villaDescription, int numberOfFloors, double poolArea) {
-        super(name, area, rentalFree, maxGuest, rentalType);
+    public Villa(String name, double area, double rentalFee, int maxGuest, String rentalType, String romStandard, String villaDescription, int numberOfFloors, double poolArea) {
+        super(name, area, rentalFee, maxGuest, rentalType);
         this.romStandard = romStandard;
         this.villaDescription = villaDescription;
         this.numberOfFloors = numberOfFloors;

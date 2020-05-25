@@ -4,9 +4,11 @@ import com.sun.corba.se.spi.extension.CopyObjectPolicy;
 import com.sun.javafx.image.impl.ByteIndexed;
 
 public class House extends Service {
-    private String roomStandard;
-    private String houseDescription;
-    private int numberOfFloors;
+    private String roomStandard;  //  Tiêu chuẩn phòng
+    private String houseDescription; // Mô tả về nhà
+    private int numberOfFloors; //  số tầng
+
+    public House(){}
 
     public House(String roomStandard, String houseDescription, int numberOfFloors) {
         this.roomStandard = roomStandard;
@@ -14,8 +16,8 @@ public class House extends Service {
         this.numberOfFloors = numberOfFloors;
     }
 
-    public House(String name, double area, double rentalFree, int maxGuest, String rentalType, String roomStandard, String houseDescription, int numberOfFloors) {
-        super(name, area, rentalFree, maxGuest, rentalType);
+    public House(String name, double area, double rentalFee, int maxGuest, String rentalType, String roomStandard, String houseDescription, int numberOfFloors) {
+        super(name, area, rentalFee, maxGuest, rentalType);
         this.roomStandard = roomStandard;
         this.houseDescription = houseDescription;
         this.numberOfFloors = numberOfFloors;

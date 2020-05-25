@@ -1,21 +1,19 @@
 package Models;
 
 public abstract class Service {
-    String name;
-    double area;
-    double rentalFree;
-    int maxGuest;
-    String rentalType;
+    String name; //tên
+    double area; //Diện tích sữ dụng
+    double rentalFee; // tiền thuê nhà
+    int maxGuest; // số người tối đa
+    String rentalType; // kiểu thuê ( ngày , giờ , tháng hoặc năm )
 
     Service() {
     }
 
-    ;
-
-    public Service(String name, double area, double rentalFree, int maxGuest, String rentalType) {
+    public Service(String name, double area, double rentalFee, int maxGuest, String rentalType) {
         this.name = name;
         this.area = area;
-        this.rentalFree = rentalFree;
+        this.rentalFee = rentalFee;
         this.maxGuest = maxGuest;
         this.rentalType = rentalType;
     }
@@ -36,12 +34,12 @@ public abstract class Service {
         this.area = area;
     }
 
-    public double getRentalFree() {
-        return rentalFree;
+    public double getRentalFee() {
+        return rentalFee;
     }
 
-    public void setRentalFree(double rentalFree) {
-        this.rentalFree = rentalFree;
+    public void setRentalFee(double rentalFee) {
+        this.rentalFee = rentalFee;
     }
 
     public int getMaxGuest() {
@@ -63,8 +61,8 @@ public abstract class Service {
     public void showInfo() {
         System.out.println("Name : " + this.name);
         System.out.println("Area : " + this.area);
-        System.out.println("Rental Free : " + this.rentalFree);
+        System.out.println("Rental Fee : " + this.rentalFee);
         System.out.println("Max Guest : " + this.maxGuest);
-        System.out.println("Rental Type : " + this.rentalFree);
+        System.out.println("Rental Type : " + this.rentalType);
     }
 }

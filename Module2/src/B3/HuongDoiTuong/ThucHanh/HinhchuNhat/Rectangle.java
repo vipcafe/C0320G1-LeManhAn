@@ -2,7 +2,7 @@ package B3.HuongDoiTuong.ThucHanh.HinhchuNhat;
 
 import java.util.Scanner;
 
-public class Rectangle {
+public class Rectangle  {
     double width, height;
 
     public Rectangle() {

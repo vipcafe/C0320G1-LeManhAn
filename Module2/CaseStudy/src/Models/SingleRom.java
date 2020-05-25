@@ -1,14 +1,16 @@
 package Models;
 
-public class singleRoom extends Service {
-    private String externalService;
+public class SingleRom extends Service {
+    private String externalService; // dịch vụ khác
 
-    public singleRoom(String externalService) {
+    public SingleRom(){}
+
+    public SingleRom(String externalService) {
         this.externalService = externalService;
     }
 
-    public singleRoom(String name, double area, double rentalFree, int maxGuest, String rentalType, String externalService) {
-        super(name, area, rentalFree, maxGuest, rentalType);
+    public SingleRom(String name, double area, double rentalFee, int maxGuest, String rentalType, String externalService) {
+        super(name, area, rentalFee, maxGuest, rentalType);
         this.externalService = externalService;
     }
 
