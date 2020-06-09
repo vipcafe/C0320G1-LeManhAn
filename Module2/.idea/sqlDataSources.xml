@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="ab27967f-d4d5-48cd-bb7b-ef5c5251ad32" />
+          <option name="name" value="my_homework" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/src/B8/DATABASE/my_homework.sql" />
+            </array>
+          </option>
+        </State>
+        <State>
+          <option name="id" value="b8a9db88-5c4e-487c-9c9f-2742ca26bf46" />
+          <option name="name" value="test" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/src/B8/DATABASE/test.sql" />
+            </array>
+          </option>
+        </State>
+        <State>
+          <option name="id" value="f3715fec-669c-45a7-a149-90fa3db3192d" />
+          <option name="name" value="furama_resort" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/src/B8/DATABASE/furama_resort.sql" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

@@ -1,10 +1,8 @@
 package Controllers;
 
 import Commons.FuncCustomerFileCSV;
-import Commons.FuncRomFileCSV;
 import Models.Customer;
-import Models.House;
-import Models.SingleRom;
+import Sort.NameCustomerComparator;
 import exception.EmailException;
 import exception.GenderException;
 import exception.IdCardException;
@@ -15,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import static Controllers.MainController.displayMainMenu;
 import static Controllers.MainController.showServices;
 
 public class NewCustomer {
@@ -42,12 +41,12 @@ public class NewCustomer {
         FuncCustomerFileCSV.writeNewCustomer(listCustomer);
         System.out.println(" Please Enter Continue .....");
         scanner.nextLine();
-        showServices();
+        displayMainMenu();
     }
     public static void showInformationCustomers() {
         listCustomer = FuncCustomerFileCSV.getFileCSV();
-        ArrayList ai = new ArrayList() ;
-        for (Customer customer : listCustomer) {
+        Collections.sort(listCustomer,new NameCustomerComparator());
+        for (Customer  customer: listCustomer) {
             System.out.println("------------------------");
             System.out.println("Name rom : " + customer.getName());
             System.out.println("Birthday: " + customer.getBirthday());
@@ -62,18 +61,24 @@ public class NewCustomer {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Please Enter Continue .....");
         scanner.nextLine();
-        showServices();
+        displayMainMenu();
     }
 
-//    public static void showNameCustomer() {
+//    public static void sortNameAndYear(){
 //        listCustomer = FuncCustomerFileCSV.getFileCSV();
-//        for (Customer customer : listCustomer) {
-//            System.out.println("Name house : " + customer.getName());
-//        }
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println(" Please Enter Continue .....");
-//        scanner.nextLine();
-//        showServices();
+//        Collections.sort(listCustomer,new NameCustomerComparator());
+//
 //    }
+
+    
+
+    public static void showNameCustomer() {
+        listCustomer = FuncCustomerFileCSV.getFileCSV();
+        int i = 1 ;
+        System.out.println("--------LIST CUSTOMER ---------");
+        for (Customer customer : listCustomer) {
+            System.out.println((i++)+". " + customer.getName());
+        }
+    }
 
 }

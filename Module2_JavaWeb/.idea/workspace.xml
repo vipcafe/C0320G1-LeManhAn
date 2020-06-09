@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f90880fd-5faa-4694-9627-c1e2cf76cfc9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Module2/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2/.idea/sqlDataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Commons/FuncCustomerFileCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Commons/FuncCustomerFileCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Commons/FuncRomFileCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Commons/FuncRomFileCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewRom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewRom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewVilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Controllers/NewVilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/CaseStudy/src/Data/Customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/CaseStudy/src/Data/Rom.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Commons/FuncRomFileCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Commons/FuncRomFileCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewHouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewHouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewRom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewRom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewVilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Controllers/NewVilla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Data/Customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Data/Customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Data/Rom.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/out/production/CaseStudy/Data/Rom.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1d1KKzueNOblqu95D5dvgJn5Hiw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f90880fd-5faa-4694-9627-c1e2cf76cfc9" name="Default Changelist" comment="" />
+      <created>1591587099415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591587099415</updated>
+      <workItem from="1591587100991" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

@@ -2,6 +2,7 @@ package Controllers;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static Controllers.NewBooking.addNewBooking;
 import static Controllers.NewCustomer.addNewCustomer;
 import static Controllers.NewCustomer.showInformationCustomers;
 import static Controllers.NewHouse.*;
@@ -33,7 +34,7 @@ public class MainController {
                 showInformationCustomers();
                 break;
             case "5":
-//                addNewBooking();
+                addNewBooking();
                 break;
             case "6":
                 break;
@@ -122,6 +123,8 @@ public class MainController {
                 showServices();
         }
     }
+
+
 //    --------------------------Show-------------------------------------
 //------------------------------1-----------------------------------------
 

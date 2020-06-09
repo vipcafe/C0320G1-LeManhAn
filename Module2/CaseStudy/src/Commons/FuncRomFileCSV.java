@@ -34,6 +34,7 @@ public class FuncRomFileCSV {
                 fileWriter.append(String.valueOf(singleRom.getMaxGuest()));
                 fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(singleRom.getRentalType());
+                fileWriter.append(COMMA_DELIMITER);
 //                -----------------Villa---------------------------
                 fileWriter.append(String.valueOf(singleRom.getExternalService()));
                 fileWriter.append(NEW_lINE_SEPARATOR);

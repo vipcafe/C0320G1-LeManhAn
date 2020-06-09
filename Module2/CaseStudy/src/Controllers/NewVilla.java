@@ -60,8 +60,9 @@ public class NewVilla {
 
     public static void showNameVilla(){
         listVilla = FuncVillaFileCSV.getFileCSV();
+        int i = 1 ;
         for (Villa villa : listVilla){
-            System.out.println("Name house  : "+villa.getName());
+            System.out.println((i++)+" : "+villa.getName());
         }
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Please Enter Continue .....");
@@ -69,3 +70,4 @@ public class NewVilla {
         showServices();
     }
 }
+

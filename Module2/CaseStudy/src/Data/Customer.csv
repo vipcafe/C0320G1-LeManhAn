@@ -1,4 +1,7 @@
 name,birthday,idCard,phone,mail,customerType,service
-anlee,12/01/1994,Nam,SSy1994,0886622577,vipcafe1994@gmail.com,null,null
-anlee2,12/01/1194,Nam,SUSU,0886622577,vipcafe1994@gmail.com,null,Map
-Le Manh,null,Male,123 456 789,0886622577,vipcafe@gmail.com,oke,yes
+An,12/01/1994,Nam,SSy1994,0886622577,vipcafe1994@gmail.com,null,null
+Binh,12/01/1194,Nam,SUSU,0886622577,vipcafe1994@gmail.com,null,null
+Toan,12/01/1194,Male,123 456 789,0886622577,vipcafe@gmail.com,null,null
+Quoc ,12/01/1195,Male,123 456 789,0886622577,vipcafe1994@gmail.com,null,Map
+Tuan,12/01/1195,Male,123 456 789,0886622577,vipcafe1994@gmail.com,null,Map
+Av,null,Male,123 456 789,0886622577,vipcafe1994@gmail.com,Mập,oke

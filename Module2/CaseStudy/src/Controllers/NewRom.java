@@ -37,14 +37,14 @@ public class NewRom {
 
     public static void showAllRom() {
         singleRom = FuncRomFileCSV.getFileCSV();
-        for (SingleRom singleRom : singleRom) {
+        for (SingleRom rom : singleRom) {
             System.out.println("------------------------");
-            System.out.println("Name rom : " + singleRom.getName());
-            System.out.println("Area rom : " + singleRom.getArea());
-            System.out.println("Rental Fee : " + singleRom.getRentalFee());
-            System.out.println("Max Guest : " + singleRom.getMaxGuest());
-            System.out.println("Rental Type : " + singleRom.getRentalType());
-            System.out.println("External Service : " + singleRom.getExternalService());
+            System.out.println("Name rom : " + rom.getName());
+            System.out.println("Area rom : " + rom.getArea());
+            System.out.println("Rental Fee : " + rom.getRentalFee());
+            System.out.println("Max Guest : " + rom.getMaxGuest());
+            System.out.println("Rental Type : " + rom.getRentalType());
+            System.out.println("External Service : " + rom.getExternalService());
             System.out.println("-------------------------");
         }
         Scanner scanner = new Scanner(System.in);
