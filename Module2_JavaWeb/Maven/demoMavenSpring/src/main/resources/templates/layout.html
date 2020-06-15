@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spring production</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+        background : darkgrey;
+        }
+        #production {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: auto;
+        }
+
+        #production td, #production th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #production tr:nth-child(even){background-color: #f2f2f2;}
+
+        #production tr:hover {background-color: #ddd;}
+
+        #production th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0c0c0c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<footer th:fragment="footer">
+    &copy; By AnLee
+</footer>
+</body>
+</html>

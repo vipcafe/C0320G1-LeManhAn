@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/production/update}" th:object="${production}">
+    <input type="hidden" th:field="*{id}">
+    <label>Tên Sản Phẩm</label><br>
+    <input type="text" th:field="*{ten}"><br>
+    <label>Giá :</label><br>
+    <input type="text" th:field="*{gia}"><br>
+    <label>Hãng sản xuất :</label><br>
+    <input type="text" th:field="*{hangSanXuat}"><br>
+    <input type="submit" value="Thêm">
+</form>
+</body>
+</html>
