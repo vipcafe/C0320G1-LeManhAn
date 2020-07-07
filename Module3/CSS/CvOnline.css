@@ -1,0 +1,64 @@
+body {
+    background: #242428	;
+}
+
+
+#titer {
+    color: #f2f2f2;
+    height: 60px;
+    line-height: 60px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#head {
+    width: 80%;
+    height: 270px;
+    background-color: rgba(0, 0, 77,0.6);
+    position: relative;
+}
+
+#head img {
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    border: 3px double white;
+}
+
+#head .content {
+    color: #f2f2f2;
+    font-size: 30px;
+    width: 50%;
+    height: 200px;
+    position: absolute ;
+    margin: 10px 500px;
+}
+
+#body-cv{
+    height: 800px;
+    width: 80%;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+#body-cv .content{
+    margin: 50px 100px ;
+    position: absolute;
+}
+
+#body-cv .content td{
+    font-size: 30px;
+    width: 150px;
+    margin: 10px;
+
+}
+div.skill{
+    font-size: 30px ;
+    margin:270px 100px;
+    position: absolute;
+}
+

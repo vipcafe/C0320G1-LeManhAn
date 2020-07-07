@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/customer/list}">List</a>
+<form  th:action="@{/customer/create}" th:object="${customer}" method="post">
+    <table>
+        <tr>
+            <td><label>Full Name:</label></td>
+            <td><input type="text" placeholder="Họ và Tên" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <td><label>Age  :</label></td>
+            <td><input type="text" placeholder="Tuổi" name="age" value=""></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <select th:field="*{province.id}">
+                    <option th:each="p :${province}"
+                            th:value="${p.id}"
+                            th:text="${p.nameProvince}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Xác Nhận"></td>
+        </tr>
+    </table>
+    <th:block th:if="${message}">
+        <p style="color: firebrick" th:text="${message}"></p>
+    </th:block>
+</form>
+<a th:href="@{/}">Back</a>
+</body>
+</html>

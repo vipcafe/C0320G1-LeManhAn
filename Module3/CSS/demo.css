@@ -1,0 +1,22 @@
+#box-img{
+    border: black;
+    width: 300px;
+    position: relative;
+}
+#box-img img{
+    width: 100%;
+}
+#text  {
+    text-align: center;
+    padding: inherit;
+    font-size: 30px;
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: rgba(1,1,1,0.5);
+    position: absolute;
+    bottom: 0;
+    margin: 0px;
+
+}

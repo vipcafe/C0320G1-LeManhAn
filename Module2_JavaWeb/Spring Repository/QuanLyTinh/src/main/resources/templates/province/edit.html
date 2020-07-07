@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/customer/list}">List</a>
+<form  th:action="@{/customer/update}" th:object="${customer}" method="post">
+    <table>
+        <p th:hidden="${customer}"></p>
+        <tr>
+            <td><label>Last Name :</label></td>
+            <td><input type="text" th:field="*{firstName}"></td>
+        </tr>
+        <tr>
+            <td><label>first Name :</label></td>
+            <td><input type="text" th:field="*{lastName}" ></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update"></td>
+        </tr>
+    </table>
+    <th:block th:if="${message}">
+        <p style="color: firebrick" th:text="${message}"></p>
+    </th:block>
+
+</form>
+</body>
+</html>

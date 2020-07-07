@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/admin/create/add}" method="post" th:object="${admin}">
+    <table>
+        <tr>
+            <td>
+                <input th:field="*{name}" placeholder="User Name">
+            </td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="password" th:field="*{password}" placeholder="Password">
+            </td>
+            <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Name Error</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Login">
+            </td>
+        </tr>
+    </table>
+
+    <th:block th:if="${message}">
+        <p style="color: brown" th:text="${message}"></p>
+    </th:block>
+
+</form>
+<a href="/customer/create">Create</a>
+</body>
+</html>
