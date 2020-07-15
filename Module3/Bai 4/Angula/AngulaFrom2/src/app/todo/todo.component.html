@@ -1,0 +1,23 @@
+<button class="btn btn-primary" (click)="show()">SHOW Todo App</button>
+<fieldset>
+<legend>Todo App</legend>
+<div [hidden]="isHidden">
+  <h2 class="text-center">
+    Todo App
+  </h2>
+  <div class="col-md-8 offset-md-1" style="width: 100%">
+    <div>
+      <input class="form-control" type="text" [formControl]="userInput" (change)="onChange()">
+    </div>
+
+    <ul>
+      <li (click)="toggleTodo(i)"
+          [class.complete]="todo.complete"
+          *ngFor="let todo of todos; index as i">
+        {{todo.content}}
+      </li>
+    </ul>
+  </div>
+</div>
+</fieldset>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<audio id="source" controls autoplay>
+    <source src="mp3/Anh%20Sẽ%20Ổn%20Thôi%20(Single)%20-%20Vương%20Anh%20Tú%20-%20Album%20320%20lossless.mp3">
+</audio>
+
+<br>
+<button type="button" onclick="play()">Next</button>
+<br>
+<div class="list-group" style="width: 30%">
+    <a href="#" class="list-group-item active">
+        Cras justo odio
+    </a>
+    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+    <a href="#" class="list-group-item">Morbi leo risus</a>
+    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+    <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
+
+<script>
+    let source2 = document.getElementById("source")
+    let count = 0;
+
+    function play() {
+        let listNhac = ["mp3/Anh%20Sẽ%20Ổn%20Thôi%20(Single)%20-%20Vương%20Anh%20Tú%20-%20Album%20320%20lossless.mp3", "mp3/Đừng%20Lo%20Anh%20Đợi%20Mà%20-%20Mr%20Siro%20-%20Bài%20hát,%20lyrics.mp3"]
+        let tenBH = ["Anh Sẻ ổn thôi ", "Đừng lo anh đợi mà"]
+        count++;
+        if (count <= (listNhac.length - 1)) {
+            source2.src = listNhac[count];
+            source2.onplay;
+        } else if (confirm("Nhạc đã hết bạn có muốn nghe lại")) {
+            source2.src = listNhac[0];
+            source2.onplay
+            count = 0;
+        }
+    }
+</script>
+</body>
+</html>

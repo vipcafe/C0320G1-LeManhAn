@@ -1,0 +1,13 @@
+<h2>Font size editor</h2>
+<button  (click)=showF()>Show</button>
+<div id="font-size" [hidden]="isHidden" >
+  <div>
+    <label>Enter font size (px):</label>
+    <input type="number" [value]="fontSize" (change)="onChange($event.target.value)">
+  </div>
+
+  <p class="output" [style.fontSize.px]="fontSize">
+    Anlee pro pro pro hahahahahahahahahahahaaaaaaaaaaaaaa
+  </p>
+</div>
+
