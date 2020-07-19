@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)=onSubmit() class="form-group row" class="col-md-6 offset-md-3" style="margin-top :200px ; background-color: rgba(0,0,0,0.3) ;padding: 20px ;border-radius: 10px">
+  <input type="text" class="form-control" placeholder="USER Name" formControlName="userName">
+  <div class="alert alert-danger" *ngIf="loginForm.get('userName').invalid && loginForm.get('userName').touched">
+    Vui lòng nhập trên 3 ký tự ^^!
+  </div>
+  <fieldset formGroupName="cfPW">
+  <input type="password" class="form-control" placeholder="Password" formControlName="password">
+  <input type="password" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
+  </fieldset>
+  <div class="alert alert-danger" role="alert" *ngIf="loginForm.hasError('passwordnotmatch', ['cfPW']) &&
+      loginForm.get('cfPW').touched">
+    Password does not match!
+  </div><br>
+  <div class="col-md-6 offset-md-3" style="width: 100%">
+  <input type="submit" value="Register"   class="btn btn-primary btn-lg" style="width: 100%">
+  </div>
+</form>

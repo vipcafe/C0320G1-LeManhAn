@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { RegisterFinalComponent } from './register-final/register-final.component';
+import { LoginComponent } from './login/login.component';
+import { TimeOfLifeComponent } from './time-of-life/time-of-life.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    RegisterFinalComponent
+    RegisterFinalComponent,
+    LoginComponent,
+    TimeOfLifeComponent
   ],
     imports: [
         BrowserModule,

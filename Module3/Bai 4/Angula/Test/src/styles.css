@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+  background-image: url("https://image4.uhdpaper.com/wallpaper-hd/anime-girl-computer-desktop-uhdpaper.com-hd-4.2477.jpg");
+}
